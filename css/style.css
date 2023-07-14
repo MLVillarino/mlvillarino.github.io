@@ -1,5 +1,6 @@
 /* CSS Document */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500&display=swap');
 
 @font-face {
 	font-family: "DIN Condensed Bold";
@@ -236,7 +237,7 @@ body {
 
 #menu {
 	width: 100%;
-	font-family: "DIN Condensed Bold";
+	font-family: "Barlow Condensed";
 	font-weight: bold;
 	font-size: 1.5em;
 	color: white;
@@ -244,7 +245,7 @@ body {
 	justify-content: center;
 	align-content: center;
 	margin: auto;
-	margin-bottom: 25px;
+	margin-bottom: 40px;
 	position: relative;
 	z-index: 1;
 }
@@ -268,7 +269,7 @@ body {
 	margin-left: 17.5%;*/
 	padding: 0px;
 	padding-top: 2px;
-	margin-top: 12px;
+	margin-top: 6px;
 	display: flex;
 	align-content: space-around;
 	justify-content: center;
@@ -479,7 +480,7 @@ body {
 }
 
 #intro {
-	font-family: "DIN Condensed Bold";
+	font-family: "Barlow Condensed";
 	font-weight: bold;
 	font-size: 2.5em;
 	color: #fbf5ea;
@@ -578,7 +579,7 @@ body {
 }
 
 #skills h2 {
-	font-family: "DIN Condensed Bold";
+	font-family: "Barlow Condensed";
 	font-weight: bold;
 	margin: 0px;
 	margin-bottom: 4px;
@@ -596,7 +597,7 @@ body {
 
 
 #gallery > h1 {
-	font-family: "DIN Condensed Bold";
+	font-family: "Barlow Condensed";
 	font-weight: bold;
 	font-size: 2.5em;
 	color: #fbf5ea;
@@ -670,7 +671,7 @@ body {
 	margin-top: 37.5%;
 	margin-bottom: auto;
 	opacity: 100% !important;
-	font-family: "DIN Condensed Bold";
+	font-family: "Barlow Condensed";
 	font-weight: bold;
 }
 
@@ -778,7 +779,7 @@ body {
 	float: right;
 */
 	text-align: left;
-	font-family: "DIN Condensed Bold";
+	font-family: "Barlow Condensed";
 	font-weight: bold;
 	margin-bottom: 4px;
 	color: #D42D4C;
@@ -802,7 +803,7 @@ body {
 
 
 #contact {
-	font-family: "DIN Condensed Bold";
+	font-family: "Barlow Condensed";
 	font-weight: bold;
 	font-size: 2.5em;
 	color: #fbf5ea;
@@ -849,7 +850,7 @@ body {
 }
 
 #contact-content h2 {
-	font-family: "DIN Condensed Bold";
+	font-family: "Barlow Condensed";
 	font-weight: bold;
 	margin: 0px;
 	margin-bottom: 4px;
