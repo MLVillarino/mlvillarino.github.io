@@ -71,8 +71,8 @@ function translate(lang){
 		$("#vint-top").find("figure").html("<img src='images/vintage_top_jp.png' alt=''>");
 	}else{
 		$("#menu").css("font-size","1.5em");
-		$("#menu").css("font-family","DIN Condensed Bold");
-		$("#menu").find("ul").css("margin-top","12px");
+		$("#menu").css("font-family","Barlow Condensed");
+		$("#menu").find("ul").css("margin-top","6px");
 		$("#menu").children("li").css("letter-spacing","2px");
 		$("#menu").find("ul").css("width","90%");
 		$("#menu").find("li").eq(0).text("HOME");
@@ -82,7 +82,7 @@ function translate(lang){
 		
 		$("#intro").html("<a style='color: #d1c55a; text-shadow: 0px;'>A</a>BOUT ME");
 		$("#intro").css("font-size","2.5em");
-		$("#intro").css("font-family","DIN Condensed Bold");
+		$("#intro").css("font-family","Barlow Condensed");
 		
 		$("#intro-content").find("p").eq(0).html("Matthias Laurence A. Villarino <br> Ohara Jouhou IT Creator Senmon Gakkou <br> University of San Carlos");
 		$("#intro-content").find("p").eq(1).text("When I was a kid, I dabbled in hobbies like drawing and game development. Over time, I found out that I enjoyed the designing and the problem solving aspects involved in the design process. With a thirst for knowledge and a desire to understand the intricacies of Japanese graphic design including mascots, typography and logos, I slowly built up experience at a vocational school by taking every opportunity to do research and putting it into practice, creating this portfolio in the process. I’m always finding ways to hone my craft.")
@@ -91,7 +91,7 @@ function translate(lang){
 		$("#skills").find("h2").eq(1).text("SKILLS");
 		$("#skills").find("h2").eq(2).text("LANGUAGES");
 		$("#skills").find("h2").eq(3).text("HOBBIES");
-		$("#skills").find("h2").css("font-family","DIN Condensed Bold");
+		$("#skills").find("h2").css("font-family","Barlow Condensed");
 		
 		$("#skills").find("h2").eq(1).siblings("p").text("Adobe Suite, video editing software (Vegas Pro, Adobe Premiere Pro), photo editing software (incl. Paint.NET), writing, drawing, critical thinking");
 		$("#skills").find("h2").eq(2).siblings("p").text("English, Japanese N2, Tagalog, Cebuano. Currently learning Spanish");
@@ -99,7 +99,7 @@ function translate(lang){
 		
 		$("#gallery").find("h1").html("<a style='color: #569bab; text-shadow: 0px;'>P</a>ORTFOLIO");
 		$("#gallery").find("h1").css("font-size","2.25em");
-		$("#gallery").find("h1").css("font-family","DIN Condensed Bold");
+		$("#gallery").find("h1").css("font-family","Barlow Condensed");
 		
 		$(".galleryText").css("font-size","30px");
 		$(".gallery").find("li").eq(0).find(".galleryText").html("Shunjukai 100th Anniversary Logo");
@@ -117,7 +117,7 @@ function translate(lang){
 		
 		$("#contact").html("<a style='color: #D35321; text-shadow: 0px;'>R</a>EACH OUT");
 		$("#contact").css("font-size","2.25em");
-		$("#contact").css("font-family","DIN Condensed Bold");
+		$("#contact").css("font-family","Barlow Condensed");
 		
 		$("#vint-top").find("figure").html("<img src='images/vintage_top.png' alt=''>");
 	}
