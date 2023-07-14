@@ -1,0 +1,524 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Matt Portfolio</title>
+		<link rel="icon" type="image/x-icon" href="images/logo.png">
+		<link rel="stylesheet" href="css/style.css" type="text/css" media="all">
+		<link rel="stylesheet" href="css/styleM.css" type="text/css" media="(orientation:portrait)">
+		
+		<link rel="preload" href="images/oldpaper2.png" as="image">
+		
+		<link rel="preload" href="images/btn-download.png" as="image">
+		<link rel="preload" href="images/btn-download-active.png" as="image">
+		<link rel="preload" href="images/btn-download-hover.png" as="image">
+		
+		<link rel="preload" href="images/software-dream.png" as="image">
+		<link rel="preload" href="images/software-gimp.png" as="image">
+		<link rel="preload" href="images/software-git.png" as="image">
+		<link rel="preload" href="images/software-illus.png" as="image">
+		<link rel="preload" href="images/software-indes.png" as="image">
+		<link rel="preload" href="images/software-photo.png" as="image">
+		<link rel="preload" href="images/software-subli.png" as="image">
+		<link rel="preload" href="images/software-word.png" as="image">
+		
+<!--		<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">-->
+		<link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css" media="all">
+		<link rel="stylesheet" href="css/slick.css" type="text/css">
+		<link rel="stylesheet" href="css/slick-theme.css" type="text/css">
+		
+		<style type="text/css">
+			.slick-slider {
+				display: table !important;
+				table-layout: fixed !important;
+				width: 100% !important;
+			}
+			
+			.slick-dots li button:before{
+				font-size: 18px;
+				font-weight: bold;
+				color: #152c5b;
+				opacity: 1;
+				content: '○';
+			}
+			.slick-dots li.slick-active button:before{
+				color: #152c5b;
+				opacity: 1;
+				content: '◉';
+			}
+			
+			.slick-slide {
+				height: 345px;
+				margin-bottom: 16px;
+			}
+			
+			@media screen and (max-width: 960px){
+				.slick-slide {
+					width: 100%;
+					height: 60vh;
+					margin-bottom: 8px;
+				}
+			}
+		</style>
+	</head>
+
+	<body>
+<!--
+		TO DO: =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+		Add Newspaper edit versions of the Slides and resize to 25% in Photoshop again
+		Loading screen
+		Translations on separate JS (IN PROGRESS)
+		Restaurant web design EXTEND BOTTOM
+		=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+		DONE:
+		Modal content
+		Slideshow banner
+		Translation function proof of concept
+		Website icon
+		Fix mobile view by shrinking title and menu to top and hamburger menu
+		FIX MENU PLACEMENT BUG FROM MOBILE TO DESKTOP VIEW RESIZING
+		FIX GALLERY MODAL SLIDE BUG
+		Slideshow slides using Telford Town, Mr Dafoe, Badaboom, Otaku Rant, Knight Brush Demo, Billionstar(numbers), American Purpose Casual(normal font) and KTF-Roadstar font and etc.
+-->
+		
+		<div id="bg"></div>
+		<label class="switch">
+			<input type="checkbox" class="checkbox">
+			<span class="toggle-thumb">
+				<img src="images/vintage_toggle_jp.svg" width="20" height="20" alt="">
+				<img src="images/vintage_toggle_en.svg" width="18" height="18" alt="">
+			</span>
+		</label>
+		<div id="container">
+			<div id="logo">
+				<figure><img src="images/logo.png" alt=""></figure>
+			</div>
+			<div id="menu">
+				<div id="menu-border"></div>
+				<ul>
+					<a href="#" target="_top"><li>HOME</li></a>
+					<a href="#intro"><li>ABOUT ME</li></a>
+					<a href="#gallery"><li>PORTFOLIO</li></a>
+					<a href="#contact"><li>REACH OUT</li></a>
+				</ul>
+			</div>
+			<div class="menu-modal">
+			</div>
+			<div id="menu-hamburger">
+				<div id="menu-icon">
+					<span id="menu-icon-1"></span>
+					<span id="menu-icon-2"></span>
+					<span id="menu-icon-3"></span>
+				</div>
+			</div>
+			<div id="banner">
+				<div id="banner-slides">
+<!--
+					<div class="banner-image"><h1>1</h1></div>
+					<div class="banner-image"><h1>1</h1></div>
+					<div class="banner-image"><h1>1</h1></div>
+					<div class="banner-image"><h1>1</h1></div>
+-->
+					<div class="banner-image"><img src="images/promo1.png" alt=""></div>
+					<div class="banner-image"><img src="images/promo2.png" alt=""></div>
+					<div class="banner-image"><img src="images/promo3.png" alt=""></div>
+					<div class="banner-image"><img src="images/promo4.png" alt=""></div>
+<!--
+					<div class="banner-image"><img src="images/larioTEMP.jpeg" alt=""></div>
+					<div class="banner-image"><img src="images/larioTEMP.jpeg" alt=""></div>
+					<div class="banner-image"><img src="images/larioTEMP.jpeg" alt=""></div>
+					<div class="banner-image"><img src="images/larioTEMP.jpeg" alt=""></div>
+-->
+				</div>
+<!--
+				<ul id="banner-buttons">
+					<a><li>○</li></a>
+					<a><li>○</li></a>
+					<a><li>○</li></a>
+					<a><li>○</li></a>
+				</ul>
+-->
+			</div>
+			<h1 id="intro"><a style="color: #d1c55a; text-shadow: 0px;">A</a>BOUT ME / メッセージ</h1>
+			<div id="intro-content">
+				<p>Matthias Laurence A. Villarino <br> UAHAFHH USCUSCUSC</p>
+				<p>子供の頃、絵を描くことやピクセルアート、ゲーム開発を趣味で制作していました。そのうち、デザインする事と
+				コンセプトワークを考える事が楽しいと思う事ができました。学問を志すことで、タイポグラフィーやロゴマークなどの
+				日本のグラフィックデザインの複雑さと考え方を理解したいと言う思いから、あらゆる考え方デザインを研究することで、
+				少しずつ経験を積んでいき、このポートフォリオを作成しました。これからも日々向上していきたいと思います。</p>
+			</div>
+			
+			<div id="skills">
+				<div>
+					<h2>SOFTWARE / ソフト</h2>
+					<ul id="soft-list">
+						<li><img src="images/software-illus.png" alt="" loading="lazy"></li>
+						<li><img src="images/software-photo.png" alt="" loading="lazy"></li>
+						<li><img src="images/software-dream.png" alt="" loading="lazy"></li>
+						<li><img src="images/software-indes.png" alt="" loading="lazy"></li>
+						<li><img src="images/software-gimp.png" alt="" loading="lazy"></li>
+						<li><img src="images/software-subli.png" alt="" loading="lazy"></li>
+						<li><img src="images/software-word.png" alt="" loading="lazy"></li>
+						<li><img src="images/software-git.png" alt="" loading="lazy"></li>
+					</ul>
+				</div>
+				<div>
+					<h2>SKILLS / スキル</h2>
+					<p>動画編集ソフト、写真編集ソフト、文章を書くこと、デッサン、スケッチ、絵を描くこと、クリティカルシンキング</p>
+				</div>
+				<div>
+					<h2>LANGUAGES / 言語</h2>
+					<p>英語、日本語 N2、タガログ語、セブアノ語</p>
+				</div>
+				<div>
+					<h2>HOBBIES / 趣味</h2>
+					<p>創作活動、動画制作、音楽を聴くこと、絵を描くこと、キャラクターデザイン</p>
+				</div>
+			</div>
+			<div id="vint-prof">
+				<img src="images/vintage_portrait.png" alt="">
+			</div>
+			<div id="vint-bolt">
+				<figure><img src="images/vintage_bolt.png" alt=""></figure>
+			</div>
+			<div id="vint-clouds">
+				<figure><img src="images/vintage_clouds.png" alt=""></figure>
+			</div>
+			<div id="vint-plant1">
+				<figure><img src="images/vintage_plant1.png" alt=""></figure>
+			</div>
+			<div id="gallery">
+				<h1><a style="color: #569bab; text-shadow: 0px;">P</a>ORTFOLIO / ポートフォリオ</h1>
+				<div class="galleryContainer">
+						<ul class="gallery">
+							<li>
+								<img src="images/portfolio/11 shunjukai 100th.png" alt="" loading="lazy">
+								<a class="galleryOver"><div class="galleryText">春秋会１００周年<br>ロゴマーク</div></a>
+								<div id="vint-award">
+									<img src="images/vintage_award.png" alt="" loading="lazy">
+								</div>
+							</li>
+							<li>
+								<img src="images/portfolio/1 coolbiz.png" alt="" loading="lazy">
+								<a class="galleryOver"><div class="galleryText">CoolBiz</div></a>
+							</li>
+							<li>
+								<img src="images/portfolio/2 tractor.jpg" alt="" loading="lazy">
+								<a class="galleryOver"><div class="galleryText">締めよう！<br>シートベルト</div></a>
+							</li>
+							<li>
+								<img src="images/portfolio/3 vet poster.jpg" alt="" loading="lazy">
+								<a class="galleryOver"><div class="galleryText">動物病院<br>チラシ</div></a>
+							</li>
+							<li>
+								<img src="images/portfolio/4 chikan.jpg" alt="" loading="lazy">
+								<a class="galleryOver"><div class="galleryText">痴漢バッジ</div></a>
+							</li>
+							<li>
+								<img src="images/portfolio/5 invoice.jpg" alt="" loading="lazy">
+								<a class="galleryOver"><div class="galleryText">インボイス制度<br>ポスター</div></a>
+							</li>
+							<li>
+								<img src="images/portfolio/6 med new year.png" alt="" loading="lazy">
+								<a class="galleryOver"><div class="galleryText">大阪医師会<br>年賀状</div></a>
+							</li>
+							<li>
+								<img src="images/portfolio/7 law mascot.jpg" alt="" loading="lazy">
+								<a class="galleryOver"><div class="galleryText">大阪弁護士会<br>マスコット</div></a>
+							</li>
+							<li>
+								<img src="images/portfolio/8 school logo.png" alt="" loading="lazy">
+								<a class="galleryOver"><div class="galleryText">大原学園の新ロゴ</div></a>
+							</li>
+							<li>
+								<img src="images/portfolio/9 biyouin.png" alt="" loading="lazy">
+								<a class="galleryOver"><div class="galleryText">美容院チラシ</div></a>
+							</li>
+							<li>
+								<img src="images/portfolio/10 btob aluminum.png" alt="" loading="lazy">
+								<a class="galleryOver"><div class="galleryText">BToB アルミニウム</div></a>
+							</li>
+							<li>
+								<img src="images/portfolio/12 printpac new year.png" alt="" loading="lazy">
+								<a class="galleryOver"><div class="galleryText">プリントパック<br>年賀状2024辰年</div></a>
+							</li>
+						</ul>
+						<div id="modal-list">
+							<div id="galleryModal11" class="modal">
+								<div class="modal-content">
+									<span class="close">×</span>
+									<div class="modal-body">
+										<img src="images/portfolio/11 shunjukai 100th.png" alt="" loading="lazy">
+										<div>
+											<h2>春秋会１００周年ロゴマーク</h2>
+											<p>クールビズは室温28°Cで快適に過ごせる服装で、ライフスタイルのキャンペーンを告知するポスターです。クールビズの意味が分かりやすくする為、文字をデザインして涼しい背景を制作しました。</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div id="galleryModal1" class="modal">
+								<div class="modal-content">
+									<span class="close">×</span>
+									<div class="modal-body">
+										<img src="images/portfolio/1 coolbiz.png" alt="" loading="lazy">
+										<div>
+											<h2>CoolBiz</h2>
+											<p>クールビズは室温28°Cで快適に過ごせる服装で、ライフスタイルのキャンペーンを告知するポスターです。クールビズの意味が分かりやすくする為、文字をデザインして涼しい背景を制作しました。</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div id="galleryModal2" class="modal">
+								<div class="modal-content">
+									<span class="close">×</span>
+									<div class="modal-body">
+										<img src="images/portfolio/2 tractor.jpg" alt="" loading="lazy">
+										<div>
+											<h2>締めよう！シートベルト</h2>
+											<p>クールビズは室温28°Cで快適に過ごせる服装で、ライフスタイルのキャンペーンを告知するポスターです。クールビズの意味が分かりやすくする為、文字をデザインして涼しい背景を制作しました。</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div id="galleryModal3" class="modal">
+								<div class="modal-content">
+									<span class="close">×</span>
+									<div class="modal-body">
+										<img src="images/portfolio/3 vet poster.jpg" alt="" loading="lazy">
+										<div>
+											<h2>動物病院チラシ</h2>
+											<p>クールビズは室温28°Cで快適に過ごせる服装で、ライフスタイルのキャンペーンを告知するポスターです。クールビズの意味が分かりやすくする為、文字をデザインして涼しい背景を制作しました。</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div id="galleryModal4" class="modal">
+								<div class="modal-content">
+									<span class="close">×</span>
+									<div class="modal-body">
+										<img src="images/portfolio/4 chikan.jpg" alt="" loading="lazy">
+										<div>
+											<h2>痴漢バッジ</h2>
+											<p>クールビズは室温28°Cで快適に過ごせる服装で、ライフスタイルのキャンペーンを告知するポスターです。クールビズの意味が分かりやすくする為、文字をデザインして涼しい背景を制作しました。</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div id="galleryModal5" class="modal">
+								<div class="modal-content">
+									<span class="close">×</span>
+									<div class="modal-body">
+										<img src="images/portfolio/5 invoice.jpg" alt="" loading="lazy">
+										<div>
+											<h2>インボイス制度ポスター</h2>
+											<p>クールビズは室温28°Cで快適に過ごせる服装で、ライフスタイルのキャンペーンを告知するポスターです。クールビズの意味が分かりやすくする為、文字をデザインして涼しい背景を制作しました。</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div id="galleryModal6" class="modal">
+								<div class="modal-content">
+									<span class="close">×</span>
+									<div class="modal-body">
+										<img src="images/portfolio/6 med new year.png" alt="" loading="lazy">
+										<div>
+											<h2>大阪医師会年賀状</h2>
+											<p>クールビズは室温28°Cで快適に過ごせる服装で、ライフスタイルのキャンペーンを告知するポスターです。クールビズの意味が分かりやすくする為、文字をデザインして涼しい背景を制作しました。</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div id="galleryModal7" class="modal">
+								<div class="modal-content">
+									<span class="close">×</span>
+									<div class="modal-body">
+										<img src="images/portfolio/7 law mascot.jpg" alt="" loading="lazy">
+										<div>
+											<h2>大阪弁護士会マスコット</h2>
+											<p>クールビズは室温28°Cで快適に過ごせる服装で、ライフスタイルのキャンペーンを告知するポスターです。クールビズの意味が分かりやすくする為、文字をデザインして涼しい背景を制作しました。</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div id="galleryModal8" class="modal">
+								<div class="modal-content">
+									<span class="close">×</span>
+									<div class="modal-body">
+										<img src="images/portfolio/8 school logo.png" alt="" loading="lazy">
+										<div>
+											<h2>大原学園の新ロゴ</h2>
+											<p>クールビズは室温28°Cで快適に過ごせる服装で、ライフスタイルのキャンペーンを告知するポスターです。クールビズの意味が分かりやすくする為、文字をデザインして涼しい背景を制作しました。</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div id="galleryModal9" class="modal">
+								<div class="modal-content">
+									<span class="close">×</span>
+									<div class="modal-body">
+										<img src="images/portfolio/9 biyouin.png" alt="" loading="lazy">
+										<div>
+											<h2>美容院チラシ</h2>
+											<p>クールビズは室温28°Cで快適に過ごせる服装で、ライフスタイルのキャンペーンを告知するポスターです。クールビズの意味が分かりやすくする為、文字をデザインして涼しい背景を制作しました。</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div id="galleryModal10" class="modal">
+								<div class="modal-content">
+									<span class="close">×</span>
+									<div class="modal-body">
+										<img src="images/portfolio/10 btob aluminum.png" alt="" loading="lazy">
+										<div>
+											<h2>BToB アルミニウム</h2>
+											<p>クールビズは室温28°Cで快適に過ごせる服装で、ライフスタイルのキャンペーンを告知するポスターです。クールビズの意味が分かりやすくする為、文字をデザインして涼しい背景を制作しました。</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div id="galleryModal12" class="modal">
+								<div class="modal-content">
+									<span class="close">×</span>
+									<div class="modal-body">
+										<img src="images/portfolio/12 printpac new year.png" alt="" loading="lazy">
+										<div>
+											<h2>プリントパック年賀状2024辰年</h2>
+											<p>プリントパックが運営する2024年の木竜の年賀状コンテストへの応募作品です。これはラッキーカラーと吉方位を使った書道の「辰」と新年の日の出を組み合わせたものです。</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+				</div>
+			</div>
+			<h1 id="contact"><a style="color: #D35321; text-shadow: 0px;">R</a>EACH OUT / 連絡先</h1>
+			<div id="contact-content">
+				<div>
+					<h2>CONTACT ME / 連絡先</h2>
+					<p>メール：<a href="mailto:mlvillarino.biz@gmail.com">mlvillarino.biz@gmail.com</a></p>
+				</div>
+				<div id="resume">
+					<h2>RESUME / 履歴書</h2>
+					<p><button><img alt=""></button></p>
+				</div>
+			</div>
+		</div>
+		<div id="vint-top">
+			<a href="#" target="_top"><figure><img src="images/vintage_top.png" alt=""></figure></a>
+		</div>
+	</body>
+	
+	<script src="js/jquery-3.7.0.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<script src="js/translation.js"></script>
+	<script src="js/slick.min.js" type="text/javascript" charset="utf-8"></script>
+<!--	<script src="js/bootstrap.min.js"></script>-->
+	<script>
+
+		winWidth = 0;
+		mobileMode = false;
+		langMode = "en"; //check translation.js for the rest
+
+		$(window).resize(function(){
+			winWidth = $(window).width();
+			if(winWidth <= 960){
+				mobileMode = true;
+				$("#menu").css("margin-left","110vw");
+				$("#menu").css("display","none");
+				$("#menu").css("opacity","0");
+			}else{
+				mobileMode = false;
+				$("#menu").css("margin-left","0px");
+				$("#menu").css("display","flex");
+				$("#menu").css("opacity","100");
+			}
+		});
+		
+		$("#menu-hamburger").on("click",function(){
+			$(".menu-modal").css("display","block");
+			$('body').css("overflow", "hidden");
+			$("#vint-top").css("display","none");
+			$(".toggle-thumb").css("display","none");
+//			$("#banner").css("position","fixed");
+			
+			$("#menu").css("margin-left","110vw");
+			$("#menu").css("display","flex");
+			$("#menu").css("opacity","0");
+			$("#menu").animate({
+				opacity: 1,
+				marginLeft: '40vw'
+			}, 400, "swing", function(){
+				//done
+			});
+		});
+		
+//		MODAL MODAL MODAL MODAL MODAL MODAL MODAL MODAL MODAL MODAL MODAL
+		$(".galleryOver").on("click",function() {
+			var ind = $(this).parent("li").index();
+//			var txt = $(this).children(".galleryText").text();
+			var top = $(window).scrollTop() + ($(window).height() * (1/8));
+			var modal = $(".modal").filter(":nth-child("+(ind+1)+")");
+			$(modal).css("display","block");
+			$('body').css("overflow", "hidden");
+			$("#vint-top").css("display","none");
+			$(".toggle-thumb").css("display","none");
+			
+			var modalchild = $(modal).children(".modal-content");
+			$(modalchild).css("opacity","0");
+			$(modalchild).css("top","-300px");
+			$(modalchild).animate({
+				opacity: 1,
+				top: top
+			}, 400, "swing", function(){
+				//done
+			});
+		});
+		$(".close").on("click",function() {
+			var ind = $(this).parent(".modal").index();
+			var modal = $(".modal").filter(":nth-child("+(ind+1)+")");
+			var modalchild = $(modal).children(".modal-content");
+			$(modalchild).css("opacity","0");
+			$(modalchild).css("top","-300px");
+			
+			$(".modal").css("display", "none");
+			$('body').css("overflow", "auto");
+			$("#vint-top").css("display","block");
+			$(".toggle-thumb").css("display","flex");
+		});
+		$(window).click(function(e) {
+			if( $(e.target).hasClass("modal") ) {
+				var ind = $(e.target).index();
+				var modal = $(".modal").filter(":nth-child("+(ind+1)+")");
+				var modalchild = $(modal).children(".modal-content");
+				$(modalchild).css("opacity","0");
+				$(modalchild).css("top","-300px");
+				
+				$(e.target).css("display", "none");
+				$('body').css("overflow", "auto");
+				$("#vint-top").css("display","block");
+				$(".toggle-thumb").css("display","flex");
+			}else if( $(e.target).hasClass("menu-modal") || (($(e.target).is("li")) && mobileMode) ) {
+				$("#menu").css("margin-left","110vw");
+				$("#menu").css("display","none");
+				$("#menu").css("opacity","0");
+				
+				$(".menu-modal").css("display", "none");
+				$('body').css("overflow", "auto");
+				$("#vint-top").css("display","block");
+				$(".toggle-thumb").css("display","flex");
+//				$("#banner").css("position","relative");
+			}
+		});
+		
+//		BANNER BANNER BANNER BANNER BANNER BANNER BANNER BANNER BANNER BANNER 
+		$("#banner").find("#banner-slides").slick({
+			autoplay: true,
+			autoplaySpeed: 2000,
+			dots: true,
+			centerMode: true,
+			arrows: false
+		});
+		
+		
+	</script>
+</html>
