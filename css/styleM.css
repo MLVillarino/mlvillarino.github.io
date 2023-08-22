@@ -12,7 +12,8 @@
 	to { border-image: url("../images/vintage_border_3.png") 20% round; }
 }
 
-@media (pointer:none), (pointer:coarse){ /*390px MOBILE VERSION MOBILE VERSION MOBILE VERSION MOBILE VERSION | old: "screen and (max-width: 960px)" */
+@media screen and (max-width: 1080px){
+/*@media (pointer:none), (pointer:coarse){ 390px MOBILE VERSION MOBILE VERSION MOBILE VERSION MOBILE VERSION | old: "screen and (max-width: 960px)" */
 
 @font-face {
 	font-family: "DIN Condensed Bold";
@@ -77,14 +78,14 @@ body {
 }
 
 #logo > figure > img {
-	width: 62.5px;
-	height: 62.5px;
+	width: 256px;
+	height: 256px;
 	margin-top: 0px;
 }
 
 #logo > figure {
 	width: 72px;
-	margin-left: 0px;
+	margin-left: 32.5vw;
 }
 
 
@@ -115,12 +116,12 @@ body {
 
 
 .switch {
-	width: 72px; /*60*/
-	height: 43px; /*34*/
+	width: 144px; /*60*/
+	height: 86px; /*34*/
 	position: relative;
 	display: inline-block;
-	margin-top: 37.5px;
-	margin-left: calc(45vw);
+	margin-top: 82.5px;
+	margin-left: calc(5vw);
 	z-index: 999;
 }
 .toggle-thumb {
@@ -140,11 +141,11 @@ body {
 }
 .toggle-thumb:before {
 	content: "";
-	height: 29px;
-	width: 29px;
+	height: 58px;
+	width: 58px;
 	position: absolute;
-	left: 8px;
-	bottom: 7px;
+	left: 16px;
+	bottom: 12px;
 	border-radius: 50%;
 	/*border: 0.25px solid #231b1a;
 	background-color: #e6e0c2;*/
@@ -159,9 +160,16 @@ body {
 	height: 0;
 }
 .checkbox:checked + .toggle-thumb:before {
-	transform: translateX(28px);
+	transform: translateX(56px);
 }
-
+.toggle-thumb > img:first-child {
+	width: 40px;
+	height: 40px;
+}
+.toggle-thumb > img:last-child {
+	width: 36px;
+	height: 36px;
+}
 
 
 
@@ -169,7 +177,7 @@ body {
 #vint-bolt {
 	z-index: 1;
 	position: absolute;
-	top: 800px; /*i added 890+200 after the banner got put in*/
+	top: 45vh; /*i added 890+200 after the banner got put in. old: 800px*/
 	left: 70%;
 /*	z-index: -25;*/
 }
@@ -184,7 +192,7 @@ body {
 	width: 20%;
 	z-index: 2;
 	position: absolute;
-	top: 800px;
+	top: 47.75vh; /* old: 800px */
 	left: 5%;
 /*	z-index: -25;*/
 }
@@ -363,23 +371,23 @@ body {
 }
 
 #menu-hamburger {
-	width: 45px;
-	height: 45px;
+	width: 90px;
+	height: 90px;
 	margin: auto;
 	z-index: 99;
 	cursor: pointer;
 	position: fixed;
 	display: flex;
 	align-items: center;
-	padding: 5px 0;
-	top: 45px;
-	right: 45px;
+	padding: 10px 0;
+	top: 90px;
+	right: 90px;
 	overflow-y: hidden;
 }
 
 #menu-hamburger span {
-	width: 40px;
-	height: 5px;
+	width: 80px;
+	height: 10px;
 	background-color: #152c5b;
 	transform: rotate(0);
 	position: absolute;
@@ -391,10 +399,12 @@ body {
 
 #menu-icon-2 {
 	top: 12px;
+	margin-top: 10px;
 }
 
 #menu-icon-3 {
 	top: 24px;
+	margin-top: 20px;
 }
 
 
@@ -403,7 +413,7 @@ body {
 
 #banner {
 	width: 87.5%;
-	height: 67.5vh;
+	height: 26.25vh;
 /*	min-height: calc(70vh - 16px);*/
 	border: 30px solid;
 	border-image: url("../images/vintage_border_3.png") 31% round;
@@ -412,18 +422,22 @@ body {
 	z-index: 1;
 	color: #53401d;
 /*	animation: borderAnimation 0.7s infinite ease; BORDERANIM AT TOP*/
+	margin-right: 0px;
+    margin-top: 0px;
 }
 
 .banner-image {
 /*	width: 90%;*/
 	margin: auto;
 /*	border: 1px solid black;*/
-	height: 60vh;
+	height: 23.75vh;
 }
 
+/*
 .slick-slide {
-	height: 128px;
+	height: 128px; refer to index.html
 }
+*/
 
 .banner-image img {
 	object-fit: cover;
@@ -466,8 +480,8 @@ body {
 
 
 #intro-content {
-	width: 87.5%;
-	height: 520px;
+	width: 88.75%; /* 87.5% old */
+	height: 17.5vh; /* 520px */
 	font-size: 1em;
 /*	min-height: calc(70vh - 16px);*/
 	border: 30px solid;
@@ -476,6 +490,8 @@ body {
 	padding: 15px;
 /*	z-index: 1;*/
 	color: #53401d;
+	margin-right: 0px;
+	margin-bottom: 25px;
 }
 
 #intro {
@@ -489,6 +505,8 @@ body {
     -1px 1px 0 #5b5400,
      1px 1px 0 #5b5400,
 	 4px 0px 0 #5b5400;
+	margin-top: 87.5px;
+	margin-bottom: 25px;
 }
 
 
@@ -871,10 +889,10 @@ body {
 	content: url("../images/btn-download-active.png");
 }
 
-@media screen and (max-width: 700px){
+@media screen and (max-width: 1080px){
 	#intro-content {
-		width: 82.5%;
-		height: 720px;
+		width: 88.75%; /* old 82.5% */
+		height: 17.5vh; /* 720px */
 		font-size: 1em;
 	/*	min-height: calc(70vh - 16px);*/
 		border: 30px solid;
@@ -885,13 +903,17 @@ body {
 		color: #53401d;
 	}
 	
+/*
 	#banner {
 		width: 80%;
 	}
+*/
 	
+/*
 	#intro-content {
 		width: 82.5%;
 	}
+*/
 }
 
 }

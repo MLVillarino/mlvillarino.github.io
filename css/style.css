@@ -154,6 +154,14 @@ body {
 .checkbox:checked + .toggle-thumb:before {
 	transform: translateX(28px);
 }
+.toggle-thumb > img:first-child {
+	width: 20px;
+	height: 20px;
+}
+.toggle-thumb > img:last-child {
+	width: 18px;
+	height: 18px;
+}
 
 
 
