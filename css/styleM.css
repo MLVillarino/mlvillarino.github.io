@@ -12,7 +12,7 @@
 	to { border-image: url("../images/vintage_border_3.png") 20% round; }
 }
 
-@media screen and (max-width: 960px){ /*390px MOBILE VERSION MOBILE VERSION MOBILE VERSION MOBILE VERSION */
+@media (pointer:none), (pointer:coarse){ /*390px MOBILE VERSION MOBILE VERSION MOBILE VERSION MOBILE VERSION | old: "screen and (max-width: 960px)" */
 
 @font-face {
 	font-family: "DIN Condensed Bold";
