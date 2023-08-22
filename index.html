@@ -52,11 +52,16 @@
 				margin-bottom: 16px;
 			}
 			
-			@media screen and (max-width: 960px){
+			@media screen and (max-width: 1080px){
 				.slick-slide {
 					width: 100%;
-					height: 60vh;
+					height: 23.75vh;
 					margin-bottom: 8px;
+				}
+				
+				.slick-slide > img {
+					height: 500px;
+					width: 100%;
 				}
 			}
 		</style>
@@ -65,8 +70,11 @@
 	<body>
 <!--
 		TO DO: =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+		FIX Why the heck the seatbelt poster links to the resume modal
+		FIX Mobile site doesn't actually work wtf 
 		Add Newspaper edit versions of the Slides and resize to 25% in Photoshop again
 		Loading screen
+		Publish the Github Page into an actual paid-for domain
 		Translations on separate JS (IN PROGRESS)
 		Restaurant web design EXTEND BOTTOM
 		=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
@@ -79,14 +87,15 @@
 		FIX MENU PLACEMENT BUG FROM MOBILE TO DESKTOP VIEW RESIZING
 		FIX GALLERY MODAL SLIDE BUG
 		Slideshow slides using Telford Town, Mr Dafoe, Badaboom, Otaku Rant, Knight Brush Demo, Billionstar(numbers), American Purpose Casual(normal font) and KTF-Roadstar font and etc.
+		Publish the site somewhere
 -->
 		
 		<div id="bg"></div>
 		<label class="switch">
 			<input type="checkbox" class="checkbox">
 			<span class="toggle-thumb">
-				<img src="images/vintage_toggle_jp.svg" width="20" height="20" alt="">
-				<img src="images/vintage_toggle_en.svg" width="18" height="18" alt="">
+				<img src="images/vintage_toggle_jp.svg" alt=""> <!--width="20" height="20"-->
+				<img src="images/vintage_toggle_en.svg" alt=""> <!--width="18" height="18"-->
 			</span>
 		</label>
 		<div id="container">
@@ -251,7 +260,7 @@
 										<img src="images/portfolio/11 shunjukai 100th.png" alt="" loading="lazy">
 										<div>
 											<h2>春秋会１００周年ロゴマーク</h2>
-											<p>クールビズは室温28°Cで快適に過ごせる服装で、ライフスタイルのキャンペーンを告知するポスターです。クールビズの意味が分かりやすくする為、文字をデザインして涼しい背景を制作しました。</p>
+											<p>弁理士春秋会の100周年記念のロゴマークです。この葉と花の花輪(リース)は上から下に春秋会の２つの季節(秋の試験合格祝賀、春の役員選挙)を示し、円形でサイクルと周年記念の意味を表すものです。</p>
 										</div>
 									</div>
 								</div>
@@ -275,7 +284,7 @@
 										<img src="images/portfolio/2 tractor.jpg" alt="" loading="lazy">
 										<div>
 											<h2>締めよう！シートベルト</h2>
-											<p>クールビズは室温28°Cで快適に過ごせる服装で、ライフスタイルのキャンペーンを告知するポスターです。クールビズの意味が分かりやすくする為、文字をデザインして涼しい背景を制作しました。</p>
+											<p>シートベルトを着用し安全な運転を促す農作業のポスターです。特別な色のシャツを着ている人々が手を繋ぐ事で、シートベルト、また農家のコミュニティーに安全を促がすと言う意味を表現しています。</p>
 										</div>
 									</div>
 								</div>
@@ -287,7 +296,7 @@
 										<img src="images/portfolio/3 vet poster.jpg" alt="" loading="lazy">
 										<div>
 											<h2>動物病院チラシ</h2>
-											<p>クールビズは室温28°Cで快適に過ごせる服装で、ライフスタイルのキャンペーンを告知するポスターです。クールビズの意味が分かりやすくする為、文字をデザインして涼しい背景を制作しました。</p>
+											<p>動物病院を宣伝するチラシです。目立たせる為に、面白い犬の画像をレイアウトしました。</p>
 										</div>
 									</div>
 								</div>
@@ -299,7 +308,7 @@
 										<img src="images/portfolio/4 chikan.jpg" alt="" loading="lazy">
 										<div>
 											<h2>痴漢バッジ</h2>
-											<p>クールビズは室温28°Cで快適に過ごせる服装で、ライフスタイルのキャンペーンを告知するポスターです。クールビズの意味が分かりやすくする為、文字をデザインして涼しい背景を制作しました。</p>
+											<p>このバッジは痴漢を思いとどまらせるためのものです。痴漢をした結果、塀の中の人に入るというメッセージを込めています。</p>
 										</div>
 									</div>
 								</div>
@@ -311,7 +320,7 @@
 										<img src="images/portfolio/5 invoice.jpg" alt="" loading="lazy">
 										<div>
 											<h2>インボイス制度ポスター</h2>
-											<p>クールビズは室温28°Cで快適に過ごせる服装で、ライフスタイルのキャンペーンを告知するポスターです。クールビズの意味が分かりやすくする為、文字をデザインして涼しい背景を制作しました。</p>
+											<p>このポスターは、インボイス制度に差し迫った事を企業に緊急に知らせるものです。作成したポスターの設定にはターゲットの企業がインボイス制度に入っていないので、ビジネスが破産していて、サプライチェーン(供給連鎖)が破綻している様子を表現しています。</p>
 										</div>
 									</div>
 								</div>
@@ -323,7 +332,7 @@
 										<img src="images/portfolio/6 med new year.png" alt="" loading="lazy">
 										<div>
 											<h2>大阪医師会年賀状</h2>
-											<p>クールビズは室温28°Cで快適に過ごせる服装で、ライフスタイルのキャンペーンを告知するポスターです。クールビズの意味が分かりやすくする為、文字をデザインして涼しい背景を制作しました。</p>
+											<p>このポスターは大阪府医師会の正月のためのものです。新年の太陽と正月の餅つきを使うことで、癸卯を代表する月の兎を表現しています。</p>
 										</div>
 									</div>
 								</div>
@@ -335,7 +344,7 @@
 										<img src="images/portfolio/7 law mascot.jpg" alt="" loading="lazy">
 										<div>
 											<h2>大阪弁護士会マスコット</h2>
-											<p>クールビズは室温28°Cで快適に過ごせる服装で、ライフスタイルのキャンペーンを告知するポスターです。クールビズの意味が分かりやすくする為、文字をデザインして涼しい背景を制作しました。</p>
+											<p>大阪弁護士会のためのマスコットキャラクターです。このマスコットは桜草、大阪の漫才(ネクタイ、メガネ)、正義の秤、そしてダイナミックでフレンドリーなポーズの組み合わせです。</p>
 										</div>
 									</div>
 								</div>
@@ -347,7 +356,7 @@
 										<img src="images/portfolio/8 school logo.png" alt="" loading="lazy">
 										<div>
 											<h2>大原学園の新ロゴ</h2>
-											<p>クールビズは室温28°Cで快適に過ごせる服装で、ライフスタイルのキャンペーンを告知するポスターです。クールビズの意味が分かりやすくする為、文字をデザインして涼しい背景を制作しました。</p>
+											<p>これは私の学校のロゴデザインコンテストに応募したものです。傾けたOpportunity(チャンス)のOに越える上向きの線と言うロゴマークです。</p>
 										</div>
 									</div>
 								</div>
@@ -359,7 +368,7 @@
 										<img src="images/portfolio/9 biyouin.png" alt="" loading="lazy">
 										<div>
 											<h2>美容院チラシ</h2>
-											<p>クールビズは室温28°Cで快適に過ごせる服装で、ライフスタイルのキャンペーンを告知するポスターです。クールビズの意味が分かりやすくする為、文字をデザインして涼しい背景を制作しました。</p>
+											<p>特別メニューと割引が何よりも強調している高級メンズヘアサロンのチラシです。</p>
 										</div>
 									</div>
 								</div>
@@ -371,7 +380,7 @@
 										<img src="images/portfolio/10 btob aluminum.png" alt="" loading="lazy">
 										<div>
 											<h2>BToB アルミニウム</h2>
-											<p>クールビズは室温28°Cで快適に過ごせる服装で、ライフスタイルのキャンペーンを告知するポスターです。クールビズの意味が分かりやすくする為、文字をデザインして涼しい背景を制作しました。</p>
+											<p>アルミニウムの再利用を特化した「UACJ」と言う日本の製造業界の会社のために作ったBtoBをテーマにしたポスターです。アルミ製の物が同じ一本の缶から出て来ています。</p>
 										</div>
 									</div>
 								</div>
@@ -396,10 +405,23 @@
 				<div>
 					<h2>CONTACT ME / 連絡先</h2>
 					<p>メール：<a href="mailto:mlvillarino.biz@gmail.com">mlvillarino.biz@gmail.com</a></p>
+					<p>LinkedIn：<a href="https://www.linkedin.com/in/matthias-laurence-villarino-281a811b0">Matthias Laurence Villarino</a></p>
 				</div>
 				<div id="resume">
 					<h2>RESUME / 履歴書</h2>
-					<p><button><img alt=""></button></p>
+					<p><button id="resume-btn"><img alt=""></button></p>
+					
+					<div id="resumeModal" class="modal">
+						<div class="modal-content">
+							<span class="close">×</span>
+							<div class="modal-body">
+								<div>
+									<h2>WIP</h2>
+									<p>Work in progress. Sorry.</p>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -457,7 +479,7 @@
 			var ind = $(this).parent("li").index();
 //			var txt = $(this).children(".galleryText").text();
 			var top = $(window).scrollTop() + ($(window).height() * (1/8));
-			var modal = $(".modal").filter(":nth-child("+(ind+1)+")");
+			var modal = $("#modal-list").children(".modal").filter(":nth-child("+(ind+1)+")");
 			$(modal).css("display","block");
 			$('body').css("overflow", "hidden");
 			$("#vint-top").css("display","none");
@@ -473,6 +495,27 @@
 				//done
 			});
 		});
+		
+		// TEMPORARY RESUME MODAL
+		$("#resume-btn").on("click",function() {
+			var top = $(window).scrollTop() + ($(window).height() * (1/8));
+			var modal = $(this).parent().siblings(".modal");
+			$(modal).css("display","block");
+			$('body').css("overflow", "hidden");
+			$("#vint-top").css("display","none");
+			$(".toggle-thumb").css("display","none");
+			
+			var modalchild = $(modal).children(".modal-content");
+			$(modalchild).css("opacity","0");
+			$(modalchild).css("top","-300px");
+			$(modalchild).animate({
+				opacity: 1,
+				top: top
+			}, 400, "swing", function(){
+				//done
+			});
+		});
+		
 		$(".close").on("click",function() {
 			var ind = $(this).parent(".modal").index();
 			var modal = $(".modal").filter(":nth-child("+(ind+1)+")");
