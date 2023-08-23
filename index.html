@@ -441,9 +441,9 @@
 		mobileMode = false;
 		langMode = "en"; //check translation.js for the rest
 
-		$(window).resize(function(){
+		$(window).resize(function(){ //FIX THIS
 			winWidth = $(window).width();
-			if(winWidth <= 960){
+			if(winWidth <= 1080){
 				mobileMode = true;
 				$("#menu").css("margin-left","110vw");
 				$("#menu").css("display","none");
