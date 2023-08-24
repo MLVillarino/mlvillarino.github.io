@@ -432,128 +432,14 @@
 	
 	<script src="js/jquery-3.7.0.min.js"></script>
 	<script src="js/jquery-ui.min.js"></script>
+	<script src="js/detectmobilebrowser.js"></script>
+	<script src="js/functions.js"></script>
 	<script src="js/translation.js"></script>
 	<script src="js/slick.min.js" type="text/javascript" charset="utf-8"></script>
 <!--	<script src="js/bootstrap.min.js"></script>-->
 	<script>
 
-		winWidth = 0;
-		mobileMode = false;
-		langMode = "en"; //check translation.js for the rest
-
-		$(window).resize(function(){ //FIX THIS
-			winWidth = $(window).width();
-			if(winWidth <= 1080){
-				mobileMode = true;
-				$("#menu").css("margin-left","110vw");
-				$("#menu").css("display","none");
-				$("#menu").css("opacity","0");
-			}else{
-				mobileMode = false;
-				$("#menu").css("margin-left","0px");
-				$("#menu").css("display","flex");
-				$("#menu").css("opacity","100");
-			}
-		});
-		
-		$("#menu-hamburger").on("click",function(){
-			$(".menu-modal").css("display","block");
-			$('body').css("overflow", "hidden");
-			$("#vint-top").css("display","none");
-			$(".toggle-thumb").css("display","none");
-//			$("#banner").css("position","fixed");
-			
-			$("#menu").css("margin-left","110vw");
-			$("#menu").css("display","flex");
-			$("#menu").css("opacity","0");
-			$("#menu").animate({
-				opacity: 1,
-				marginLeft: '40vw'
-			}, 400, "swing", function(){
-				//done
-			});
-		});
-		
-//		MODAL MODAL MODAL MODAL MODAL MODAL MODAL MODAL MODAL MODAL MODAL
-		$(".galleryOver").on("click",function() {
-			var ind = $(this).parent("li").index();
-//			var txt = $(this).children(".galleryText").text();
-			var top = $(window).scrollTop() + ($(window).height() * (1/8));
-			var modal = $("#modal-list").children(".modal").filter(":nth-child("+(ind+1)+")");
-			$(modal).css("display","block");
-			$('body').css("overflow", "hidden");
-			$("#vint-top").css("display","none");
-			$(".toggle-thumb").css("display","none");
-			
-			var modalchild = $(modal).children(".modal-content");
-			$(modalchild).css("opacity","0");
-			$(modalchild).css("top","-300px");
-			$(modalchild).animate({
-				opacity: 1,
-				top: top
-			}, 400, "swing", function(){
-				//done
-			});
-		});
-		
-		// TEMPORARY RESUME MODAL
-		$("#resume-btn").on("click",function() {
-			var top = $(window).scrollTop() + ($(window).height() * (1/8));
-			var modal = $(this).parent().siblings(".modal");
-			$(modal).css("display","block");
-			$('body').css("overflow", "hidden");
-			$("#vint-top").css("display","none");
-			$(".toggle-thumb").css("display","none");
-			
-			var modalchild = $(modal).children(".modal-content");
-			$(modalchild).css("opacity","0");
-			$(modalchild).css("top","-300px");
-			$(modalchild).animate({
-				opacity: 1,
-				top: top
-			}, 400, "swing", function(){
-				//done
-			});
-		});
-		
-		$(".close").on("click",function() {
-			var ind = $(this).parent(".modal").index();
-			var modal = $(".modal").filter(":nth-child("+(ind+1)+")");
-			var modalchild = $(modal).children(".modal-content");
-			$(modalchild).css("opacity","0");
-			$(modalchild).css("top","-300px");
-			
-			$(".modal").css("display", "none");
-			$('body').css("overflow", "auto");
-			$("#vint-top").css("display","block");
-			$(".toggle-thumb").css("display","flex");
-		});
-		$(window).click(function(e) {
-			if( $(e.target).hasClass("modal") ) {
-				var ind = $(e.target).index();
-				var modal = $(".modal").filter(":nth-child("+(ind+1)+")");
-				var modalchild = $(modal).children(".modal-content");
-				$(modalchild).css("opacity","0");
-				$(modalchild).css("top","-300px");
-				
-				$(e.target).css("display", "none");
-				$('body').css("overflow", "auto");
-				$("#vint-top").css("display","block");
-				$(".toggle-thumb").css("display","flex");
-			}else if( $(e.target).hasClass("menu-modal") || (($(e.target).is("li")) && mobileMode) ) {
-				$("#menu").css("margin-left","110vw");
-				$("#menu").css("display","none");
-				$("#menu").css("opacity","0");
-				
-				$(".menu-modal").css("display", "none");
-				$('body').css("overflow", "auto");
-				$("#vint-top").css("display","block");
-				$(".toggle-thumb").css("display","flex");
-//				$("#banner").css("position","relative");
-			}
-		});
-		
-//		BANNER BANNER BANNER BANNER BANNER BANNER BANNER BANNER BANNER BANNER 
+		// Sliders setup on top
 		$("#banner").find("#banner-slides").slick({
 			autoplay: true,
 			autoplaySpeed: 2000,
@@ -561,7 +447,6 @@
 			centerMode: true,
 			arrows: false
 		});
-		
 		
 	</script>
 </html>
