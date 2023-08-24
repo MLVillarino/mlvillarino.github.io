@@ -505,9 +505,9 @@ body {
     1px -1px 0 #5b5400,
     -1px 1px 0 #5b5400,
      1px 1px 0 #5b5400,
-	 4px 0px 0 #5b5400;
+	 6px 0px 0 #5b5400;
 	margin-top: 87.5px;
-	margin-bottom: 25px;
+	margin-bottom: 31.25px;
 }
 
 
@@ -623,7 +623,7 @@ body {
     1px -1px 0 #1b2d63,
     -1px 1px 0 #1b2d63,
      1px 1px 0 #1b2d63,
-	 4px 0px 0 #1b2d63;
+	 6px 0px 0 #1b2d63;
 	 margin-top: 260px;
 }
 
@@ -635,23 +635,28 @@ body {
 	display: flex;
 	flex-wrap: wrap;
 	padding-left: 0px;
-	gap: 10px;
+	gap: 17.5px;
+	flex-direction: column;
+	height: 4250px;
+	margin-top: 25px;
 }
 
 .gallery > li {
-	height: 40vh;
+	height: auto;
 	flex-grow: 1;
 	box-sizing: border-box;
 	position: relative;
 	list-style: none;
 	transition: 0.75s ease-out;
     box-shadow: 0px;
+	width: 43.75vw;
+	overflow-x: hidden;
 }
 
 .gallery > li > img {
 	object-fit: cover;
-	min-width: 100%;
-	max-height: 100%;
+	max-width: 100%;
+	min-height: 100%;
 	vertical-align: middle;
 	flex-grow: 0;
 }
@@ -814,7 +819,7 @@ body {
     1px -1px 0 #546930,
     -1px 1px 0 #546930,
      1px 1px 0 #546930,
-	 4px 0px 0 #005073;
+	 6px 0px 0 #005073;
 	 margin-top: 80px;
 }
 
