@@ -72,16 +72,25 @@ $("#menu-hamburger").on("click",function(){
 $(".galleryOver").on("click",function() {
 	var ind = $(this).parent("li").index();
 //			var txt = $(this).children(".galleryText").text();
-	var top = $(window).scrollTop() + ($(window).height() * (1/8));
+	if(mobileMode){
+		var top = $(window).scrollTop() + ($(window).height() * (1.15/3));
+	}else{
+		var top = $(window).scrollTop() + ($(window).height() * (1/10));
+	}
 	var modal = $("#modal-list").children(".modal").filter(":nth-child("+(ind+1)+")");
 	$(modal).css("display","block");
+	$("#modal-list").find("p").css("display","block");
 	$('body').css("overflow", "hidden");
 	$("#vint-top").css("display","none");
 	$(".toggle-thumb").css("display","none");
 
 	var modalchild = $(modal).children(".modal-content");
 	$(modalchild).css("opacity","0");
-	$(modalchild).css("top","-300px");
+	if(mobileMode){
+		$(modalchild).css("top","450vh");
+	}else{
+		$(modalchild).css("top","-300px");
+	}
 	$(modalchild).animate({
 		opacity: 1,
 		top: top
