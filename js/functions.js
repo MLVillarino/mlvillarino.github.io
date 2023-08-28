@@ -76,7 +76,7 @@ $(".galleryOver").on("click",function() {
 	var ind = $(this).parent("li").index();
 //			var txt = $(this).children(".galleryText").text();
 	if(mobileMode){
-		var top = $(window).scrollTop() + ($(window).height() * (1/3));
+		var top = $(window).scrollTop() + ($(window).height() * (1/4));
 	}else{
 		var top = $(window).scrollTop() + ($(window).height() * (1/10));
 	}
