@@ -23,7 +23,7 @@ function translate(lang){
 	langMode = lang; //for outside translate button toggle
 	if(lang === "jp"){
 		if(mobileMode){
-			$("#menu").css("font-size","1.25em");
+			$("#menu").css("font-size","2.75em");
 			$("#intro").css("font-size","2.25em");
 			$("#gallery").find("h1").css("font-size","2.25em");
 			$("#contact").css("font-size","2.25em");
@@ -112,7 +112,7 @@ function translate(lang){
 		$("#vint-top").find("figure").html("<img src='images/vintage_top_jp.png' alt=''>");
 	}else{
 		if(mobileMode){
-			$("#menu").css("font-size","1.5em");
+			$("#menu").css("font-size","3em");
 			$("#intro").css("font-size","3em");
 			$("#gallery").find("h1").css("font-size","3em");
 			$("#contact").css("font-size","3em");

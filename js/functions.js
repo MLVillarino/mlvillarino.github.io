@@ -9,13 +9,13 @@ if(chk){
 	$("#menu").css("margin-left","110vw");
 	$("#menu").css("display","none");
 	$("#menu").css("opacity","0");
-	console.log("MOBILE MODE");
+//	console.log("MOBILE MODE");
 }else{
 	mobileMode = false;
 	$("#menu").css("margin-left","0px");
 	$("#menu").css("display","flex");
 	$("#menu").css("opacity","100");
-	console.log("DESKTOP MODE");
+//	console.log("DESKTOP MODE");
 }
 
 $(window).resize(function(){ //FIX THIS
@@ -56,9 +56,12 @@ $("#menu-hamburger").on("click",function(){
 	$("#vint-top").css("display","none");
 	$(".toggle-thumb").css("display","none");
 //			$("#banner").css("position","fixed");
-
-	$("#menu").css("margin-left","110vw");
-	$("#menu").css("display","flex");
+	
+	console.log("this one ESTE");
+	
+	$("#menu").css("margin-left","100vw");
+	$("#menu").css("display","block");
+	$("#menu").css("position","absolute");
 	$("#menu").css("opacity","0");
 	$("#menu").animate({
 		opacity: 1,
@@ -73,7 +76,7 @@ $(".galleryOver").on("click",function() {
 	var ind = $(this).parent("li").index();
 //			var txt = $(this).children(".galleryText").text();
 	if(mobileMode){
-		var top = $(window).scrollTop() + ($(window).height() * (1.15/3));
+		var top = $(window).scrollTop() + ($(window).height() * (1/3));
 	}else{
 		var top = $(window).scrollTop() + ($(window).height() * (1/10));
 	}
@@ -145,7 +148,7 @@ $(window).click(function(e) { // Outside the window
 		$('body').css("overflow", "auto");
 		$("#vint-top").css("display","block");
 		$(".toggle-thumb").css("display","flex");
-	}else if( $(e.target).hasClass("menu-modal") || (($(e.target).is("li")) && mobileMode) ) {
+	}else if( $(e.target).hasClass("menu-modal") || (($(e.target).is(".menu-item")) && mobileMode) ) {
 		$("#menu").css("margin-left","110vw");
 		$("#menu").css("display","none");
 		$("#menu").css("opacity","0");
@@ -156,4 +159,14 @@ $(window).click(function(e) { // Outside the window
 		$(".toggle-thumb").css("display","flex");
 //				$("#banner").css("position","relative");
 	}
+});
+$(".menu-item").on("click",function(){
+	$("#menu").css("margin-left","110vw");
+	$("#menu").css("display","none");
+	$("#menu").css("opacity","0");
+
+	$(".menu-modal").css("display", "none");
+	$('body').css("overflow", "auto");
+	$("#vint-top").css("display","block");
+	$(".toggle-thumb").css("display","flex");
 });
