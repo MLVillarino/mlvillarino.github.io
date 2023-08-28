@@ -161,12 +161,14 @@ $(window).click(function(e) { // Outside the window
 	}
 });
 $(".menu-item").on("click",function(){
-	$("#menu").css("margin-left","110vw");
-	$("#menu").css("display","none");
-	$("#menu").css("opacity","0");
+	if(mobileMode){
+		$("#menu").css("margin-left","110vw");
+		$("#menu").css("display","none");
+		$("#menu").css("opacity","0");
 
-	$(".menu-modal").css("display", "none");
-	$('body').css("overflow", "auto");
-	$("#vint-top").css("display","block");
-	$(".toggle-thumb").css("display","flex");
+		$(".menu-modal").css("display", "none");
+		$('body').css("overflow", "auto");
+		$("#vint-top").css("display","block");
+		$(".toggle-thumb").css("display","flex");
+	}
 });
