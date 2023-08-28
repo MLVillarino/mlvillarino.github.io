@@ -70,7 +70,6 @@
 	<body>
 <!--
 		TO DO: =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-		Translations on separate JS (IN PROGRESS)
 		FIX Broken mobile menu transition
 		ADD Actual portfolio and resume to downloads
 		FIX Why the heck the seatbelt poster links to the resume modal
@@ -91,6 +90,8 @@
 		Slideshow slides using Telford Town, Mr Dafoe, Badaboom, Otaku Rant, Knight Brush Demo, Billionstar(numbers), American Purpose Casual(normal font) and KTF-Roadstar font and etc.
 		Publish the site somewhere
 		FIX Mobile site doesn't actually work wtf (font readability, sizes and measurements, vector art positioning, mobile detection, broken slider, unnecessary hovers, single column gallery)
+		Translations on separate JS (IN PROGRESS)
+		FIX broken Gallery on mobile
 -->
 		
 		<div id="bg"></div>
@@ -108,10 +109,10 @@
 			<div id="menu">
 				<div id="menu-border"></div>
 				<ul>
-					<a href="#" target="_top"><li>HOME</li></a>
-					<a href="#intro"><li>ABOUT ME</li></a>
-					<a href="#gallery"><li>PORTFOLIO</li></a>
-					<a href="#contact"><li>REACH OUT</li></a>
+					<a href="#" target="_top" class="menu-item"><li>HOME</li></a>
+					<a href="#intro" class="menu-item"><li>ABOUT ME</li></a>
+					<a href="#gallery" class="menu-item"><li>PORTFOLIO</li></a>
+					<a href="#contact" class="menu-item"><li>REACH OUT</li></a>
 				</ul>
 			</div>
 			<div class="menu-modal">
@@ -131,6 +132,7 @@
 					<div class="banner-image"><h1>1</h1></div>
 					<div class="banner-image"><h1>1</h1></div>
 -->
+					<div class="banner-image"><img src="images/promo0.png" alt=""></div>
 					<div class="banner-image"><img src="images/promo1.png" alt=""></div>
 					<div class="banner-image"><img src="images/promo2.png" alt=""></div>
 					<div class="banner-image"><img src="images/promo3.png" alt=""></div>
@@ -445,7 +447,7 @@
 		// Sliders setup on top
 		$("#banner").find("#banner-slides").slick({
 			autoplay: true,
-			autoplaySpeed: 2000,
+			autoplaySpeed: 5000,
 			dots: true,
 			centerMode: true,
 			arrows: false
