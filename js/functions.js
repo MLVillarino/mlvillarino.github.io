@@ -2,6 +2,11 @@ winWidth = 0;
 mobileMode = false;
 langMode = "en"; //check translation.js for the rest
 
+
+
+
+
+// CHECK IF MOBILE MODE OR DESKTOP MODE
 winWidth = $(window).width();
 chk = mobileCheck();
 if(chk){
@@ -17,8 +22,7 @@ if(chk){
 	$("#menu").css("opacity","100");
 //	console.log("DESKTOP MODE");
 }
-
-$(window).resize(function(){ //FIX THIS
+$(window).resize(function(){
 	winWidth = $(window).width();
 	chk = mobileCheck();
 	if(chk){
@@ -49,6 +53,10 @@ $(window).resize(function(){ //FIX THIS
 //			}
 //		});
 
+
+
+
+
 // Menu Modal from clicking on the Hamburger Menu
 $("#menu-hamburger").on("click",function(){
 	$(".menu-modal").css("display","block");
@@ -70,6 +78,10 @@ $("#menu-hamburger").on("click",function(){
 		//done
 	});
 });
+
+
+
+
 
 // Gallery Modal
 $(".galleryOver").on("click",function() {
@@ -102,6 +114,10 @@ $(".galleryOver").on("click",function() {
 	});
 });
 
+
+
+
+
 // Resume Modal TEMP NOT WORKING
 $("#resume-btn").on("click",function() {
 	var top = $(window).scrollTop() + ($(window).height() * (1/8));
@@ -121,6 +137,9 @@ $("#resume-btn").on("click",function() {
 		//done
 	});
 });
+
+
+
 
 
 // Close the Modal with the X Button or my clicking outside the modal window
@@ -172,3 +191,37 @@ $(".menu-item").on("click",function(){
 		$(".toggle-thumb").css("display","flex");
 	}
 });
+
+
+
+
+
+// FADE INTO VIEW
+function isScrolledIntoView(elem) {
+	var centerY = Math.max( 0,( $(window).height()-$(elem).outerHeight() )+$(window).scrollTop() );
+	
+	var elementTop = $(elem).offset().top;
+	var elementBottom = elementTop + $(elem).height();
+	
+	if(mobileMode){
+		return elementTop >= centerY*.65 && elementBottom <= centerY*1.25;
+	}else{
+		return elementTop <= centerY*1.05 && elementBottom >= centerY*1.05;
+	}
+}
+$(window).on("scroll resize",function(){
+	$(".fade-in").each(function(index, element){
+		if(isScrolledIntoView(element) && !$(element).hasClass("animate")){
+			$(element).animate({
+				opacity: 1
+			}, 5, "swing", function(){
+				//done
+			});
+			$(element).addClass("animate");
+		}
+	});
+});
+
+
+
+
