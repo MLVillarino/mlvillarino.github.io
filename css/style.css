@@ -846,7 +846,7 @@ body {
 }
 #contact-content > div {
 	width: 40%;
-	height: 168px;
+	height: 205px; /* 168 px */
 	padding: 0px;
 	margin: 0px;
 	margin-bottom: 2.5%;
@@ -865,8 +865,11 @@ body {
 	font-family: "Barlow Condensed";
 	font-weight: bold;
 	margin: 0px;
-	margin-bottom: 4px;
+	margin-bottom: 12px;
 	text-align: left;
+}
+#contact-content > div:first-child > h2 {
+	margin-bottom: 28px;
 }
 #contact-content > div:first-child p {
 	font-size: 20px;
@@ -883,7 +886,7 @@ body {
 #resume > p {
 	margin-top: 0px;
 }
-#resume > p > button {
+#resume-btn {
 	width: 275px; /*x5 the size in illus*/
     height: 78px;
 	border: none;
@@ -892,16 +895,36 @@ body {
 	background-color: inherit;
 	padding: 0px;
 }
-#resume > p > button > img {
+#resume-btn > img {
+	width: 275px; /*x5 thge size in illus*/
+    height: 78px;
+	content: url("../images/btn-resu-download.png");
+}
+#resume-btn > img:hover {
+	content: url("../images/btn-resu-download-hover.png");
+}
+#resume-btn > img:active {
+	content: url("../images/btn-resu-download-active.png");
+}
+#portfolio-btn {
 	width: 275px; /*x5 the size in illus*/
     height: 78px;
-	content: url("../images/btn-download.png");
+	border: none;
+	cursor: pointer;
+	appearance: none;
+	background-color: inherit;
+	padding: 0px;
 }
-#resume > p > button > img:hover {
-	content: url("../images/btn-download-hover.png");
+#portfolio-btn > img {
+	width: 275px; /*x5 the size in illus*/
+    height: 78px;
+	content: url("../images/btn-port-download.png");
 }
-#resume > p > button > img:active {
-	content: url("../images/btn-download-active.png");
+#portfolio-btn > img:hover {
+	content: url("../images/btn-port-download-hover.png");
+}
+#portfolio-btn > img:active {
+	content: url("../images/btn-port-download-active.png");
 }
 
 
@@ -952,3 +975,21 @@ body {
 	*/
 	}
 }
+
+
+
+
+
+.fade-in {
+	opacity: 0;
+	transform: translateY(20vh);
+	transition: 0.5s;
+	visibility: hidden;
+	will-change: opacity, visibility;
+}
+.fade-in.animate {
+	transform: translateY(0vh);
+	visibility: visible;
+}
+
+

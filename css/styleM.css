@@ -845,15 +845,6 @@ body {
  	margin-top: 40px;
 	margin-bottom: 100px;
 }
-
-#contact-content > div:nth-child(2n+1) {
-	margin-right: 0%;
-	float: none;
-}
-#contact-content > div:nth-child(2n) {
-	margin: 0px;
-	float: none;
-}
 #contact-content > div {
 	width: 90%;
 	height: 147px;
@@ -865,6 +856,14 @@ body {
 	border-image-slice: 30% fill;
 	color: #D18674;
 	font-size: 28px;
+}
+#contact-content > div:nth-child(2n+1) {
+	margin-right: 0%;
+	float: none;
+}
+#contact-content > div:nth-child(2n) {
+	margin: 0px;
+	float: none;
 }
 #contact-content > div:first-child {
 	border-image: url("../images/vintage_border_cont.png") 30% round;
@@ -878,6 +877,9 @@ body {
 	margin: 0px;
 	margin-bottom: 4px;
 	text-align: center;
+}
+#contact-content > div:first-child > h2 {
+	margin-bottom: 12px;
 }
 #contact-content > div:first-child p,
 #contact-content > div:first-child a {
@@ -894,8 +896,9 @@ body {
 
 #resume > p {
 	margin-top: 0px;
+	font-size: 0px;
 }
-#resume > p > button {
+#resume-btn {
 	width: 360px; /*x5 the size in illus*/
     height: 102px;
 	border: none;
@@ -904,16 +907,36 @@ body {
 	background-color: inherit;
 	padding: 0px;
 }
-#resume > p > button > img {
+#resume-btn > img {
 	width: 360px; /*x5 the size in illus*/
     height: 102px;
-	content: url("../images/btn-download.png");
+	content: url("../images/btn-resu-download.png");
 }
-#resume > p > button > img:hover {
-	content: url("../images/btn-download-hover.png");
+#resume-btn > img:hover {
+	content: url("../images/btn-resu-download-hover.png");
 }
-#resume > p > button > img:active {
-	content: url("../images/btn-download-active.png");
+#resume-btn > img:active {
+	content: url("../images/btn-resu-download-active.png");
+}
+#portfolio-btn {
+	width: 360px; /*x5 the size in illus*/
+    height: 102px;
+	border: none;
+	cursor: pointer;
+	appearance: none;
+	background-color: inherit;
+	padding: 0px;
+}
+#portfolio-btn > img {
+	width: 360px; /*x5 the size in illus*/
+    height: 102px;
+	content: url("../images/btn-port-download.png");
+}
+#portfolio-btn > img:hover {
+	content: url("../images/btn-port-download-hover.png");
+}
+#portfolio-btn > img:active {
+	content: url("../images/btn-port-download-active.png");
 }
 
 @media screen and (max-width: 1080px){
