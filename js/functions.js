@@ -120,22 +120,22 @@ $(".galleryOver").on("click",function() {
 
 // Resume Modal TEMP NOT WORKING
 $("#resume-btn").on("click",function() {
-	var top = $(window).scrollTop() + ($(window).height() * (1/8));
-	var modal = $(this).parent().siblings(".modal");
-	$(modal).css("display","block");
-	$('body').css("overflow", "hidden");
-	$("#vint-top").css("display","none");
-	$(".toggle-thumb").css("display","none");
-
-	var modalchild = $(modal).children(".modal-content");
-	$(modalchild).css("opacity","0");
-	$(modalchild).css("top","-300px");
-	$(modalchild).animate({
-		opacity: 1,
-		top: top
-	}, 400, "swing", function(){
-		//done
-	});
+//	var top = $(window).scrollTop() + ($(window).height() * (1/8));
+//	var modal = $(this).parent().siblings(".modal");
+//	$(modal).css("display","block");
+//	$('body').css("overflow", "hidden");
+//	$("#vint-top").css("display","none");
+//	$(".toggle-thumb").css("display","none");
+//
+//	var modalchild = $(modal).children(".modal-content");
+//	$(modalchild).css("opacity","0");
+//	$(modalchild).css("top","-300px");
+//	$(modalchild).animate({
+//		opacity: 1,
+//		top: top
+//	}, 400, "swing", function(){
+//		//done
+//	});
 });
 
 
