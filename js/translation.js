@@ -110,6 +110,7 @@ function translate(lang){
 		$("#contact-content").find("div").eq(0).find("p").eq(0).html("メール：<a href='mailto:mlvillarino.biz@gmail.com'>mlvillarino.biz@gmail.com</a>");
 		
 		$("#vint-top").find("figure").html("<img src='images/vintage_top_jp.png' alt=''>");
+		$("#portfolio-btn").attr("onclick","window.location.href='https://drive.google.com/uc?export=download&id=1lSv5RfIS5mpLrgZbiFVS8HpC6AOGdCWB'");
 	}else{
 		if(mobileMode){
 			$("#menu").css("font-size","3em");
@@ -199,5 +200,6 @@ function translate(lang){
 		$("#contact-content").find("div").eq(0).find("p").eq(0).html("Email: <a href='mailto:mlvillarino.biz@gmail.com'>mlvillarino.biz@gmail.com</a>");
 		
 		$("#vint-top").find("figure").html("<img src='images/vintage_top.png' alt=''>");
+		$("#portfolio-btn").attr("onclick","window.location.href='https://drive.google.com/uc?export=download&id=16VWbAeKFKdNUYD7ogpVfbZdFrYbcW060'");
 	}
 }
