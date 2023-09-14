@@ -19,7 +19,6 @@
 */
 
 html {
-	scroll-behavior: smooth;
 	min-height: 100%;
 	margin: 0;
 }
@@ -62,7 +61,34 @@ body {
 	z-index: -999;
 }
 
+#loading {
+	width: 100vw;
+	height: 100vh;
+	overflow-x: hidden;
+	overflow-y: hidden;
+	z-index: 9999999;
+	position: absolute;
+}
+
+#loading > h1 {
+	text-align: center;
+	margin: 0px;
+	margin-top: 40vh;
+	font-family: "Barlow Condensed";
+	font-weight: bold;
+	font-size: 5em;
+	color: #fbf5ea;
+    text-shadow:
+   -1px -1px 0 #550030,  
+    1px -1px 0 #550030,
+    -1px 1px 0 #550030,
+     1px 1px 0 #550030,
+	 4px 4px 0 #d42d4c;
+}
+
 #container {
+	opacity: 0;
+	
 	width: 1000px;
 	font-family: "Montserrat";
 	font-size: 24px;
@@ -71,6 +97,7 @@ body {
 	margin: auto;
 	padding: 0px;
 	z-index: 25;
+	overflow-x: hidden;
 }
 
 #logo > figure > img {
@@ -109,6 +136,8 @@ body {
 
 
 .switch {
+	opacity: 0;
+
 	width: 72px; /*60*/
 	height: 43px; /*34*/
 	position: relative;
@@ -865,7 +894,6 @@ body {
 	font-family: "Barlow Condensed";
 	font-weight: bold;
 	margin: 0px;
-	margin-bottom: 12px;
 	text-align: left;
 }
 #contact-content > div:first-child > h2 {

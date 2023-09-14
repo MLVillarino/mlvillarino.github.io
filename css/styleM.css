@@ -67,7 +67,33 @@ body {
 	z-index: -999;
 }
 
+#loading {
+	width: 100vw;
+	height: 100vh;
+	overflow-x: hidden;
+	overflow-y: hidden;
+	z-index: 9999999;
+	position: absolute;
+}
+
+#loading > h1 {
+	text-align: center;
+	margin: 0px;
+	margin-top: 45vh;
+	font-family: "Barlow Condensed";
+	font-weight: bold;
+	font-size: 8em;
+	color: #fbf5ea;
+    text-shadow:
+   -1px -1px 0 #550030,  
+    1px -1px 0 #550030,
+    -1px 1px 0 #550030,
+     1px 1px 0 #550030,
+	 4px 4px 0 #d42d4c;
+}
+
 #container {
+	opacity: 0;
 	width: 100%;
 	font-family: "Montserrat";
 	font-size: 24px;
