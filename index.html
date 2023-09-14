@@ -30,6 +30,8 @@
 		<link rel="stylesheet" href="css/slick.css" type="text/css">
 		<link rel="stylesheet" href="css/slick-theme.css" type="text/css">
 		
+		<script>history.scrollRestoration = "manual"</script>
+		
 		<style type="text/css">
 			.slick-slider {
 				display: table !important;
@@ -73,10 +75,6 @@
 	<body>
 <!--
 		TO DO: =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-		Resize slides to 25% in Photoshop again
-		ADD Actual portfolio and resume to downloads
-		FIX Why the heck the seatbelt poster links to the resume modal
-		Loading screen
 		Publish the Github Page into an actual paid-for domain
 		Restaurant web design EXTEND BOTTOM
 		=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
@@ -96,9 +94,19 @@
 		FIX Broken mobile menu transition
 		Fade-in elements on scroll for smoother UX
 		Add Newspaper edit versions of the Slides
+		Resize slides to 25% in Photoshop again
+		ADD Actual portfolio and resume to downloads
+		Loading screen
+		Disabled annoying auto scroll
+		FIX Why the heck the seatbelt poster links to the resume modal
+		Fixed resume DL link
+		Updated Portfolio from Drive
+		Fixed bad portfolio image
+		Fix weird Download button auto scroll
 -->
 		
 		<div id="bg"></div>
+		<div id="loading"><h1>LOADING</h1></div>
 		<label class="switch">
 			<input type="checkbox" class="checkbox">
 			<span class="toggle-thumb">
@@ -249,7 +257,7 @@
 								<a class="galleryOver"><div class="galleryText">大原学園の新ロゴ</div></a>
 							</li>
 							<li class="fade-in">
-								<img src="images/portfolio/9 biyouin.png" alt="" loading="lazy">
+								<img src="images/portfolio/9 biyouin NOPOL.png" alt="" loading="lazy">
 								<a class="galleryOver"><div class="galleryText">美容院チラシ</div></a>
 							</li>
 							<li class="fade-in">
@@ -374,7 +382,7 @@
 								<div class="modal-content">
 									<span class="close">×</span>
 									<div class="modal-body">
-										<img src="images/portfolio/9 biyouin.png" alt="" loading="lazy">
+										<img src="images/portfolio/9 biyouin NOPOL.png" alt="" loading="lazy">
 										<div>
 											<h2>美容院チラシ</h2>
 											<p>特別メニューと割引が何よりも強調している高級メンズヘアサロンのチラシです。</p>
@@ -419,7 +427,7 @@
 				<div id="resume" class="fade-in">
 					<h2>RESUME / 履歴書</h2>
 					<p>
-						<button id="resume-btn" onclick="window.location.href='https://drive.google.com/uc?export=download&id=1STLdS6DhYb5HdLnoiXPOL--iRf7jJxLw'"><img alt=""></button><!--doin your mom-->
+						<button id="resume-btn" onclick="window.location.href='https://drive.google.com/uc?export=download&id=1mlkEiO6l6N4xN5IwBcXfwQBwb02WQKhG'"><img alt=""></button><!--doin your mom-->
 						<button id="portfolio-btn" onclick="window.location.href='https://drive.google.com/uc?export=download&id=1lSv5RfIS5mpLrgZbiFVS8HpC6AOGdCWB'"><img alt=""></button>
 					</p>
 					
@@ -461,7 +469,47 @@
 	<script src="js/slick.min.js" type="text/javascript" charset="utf-8"></script>
 <!--	<script src="js/bootstrap.min.js"></script>-->
 	<script>
+//		doLoading = false;
+//		
+//		if(doLoading) {
+			window.onbeforeunload = function () {
+			  window.scrollTo(0, 0);
+			}
 
+			/* PROMISES */
+			function wait(delay) {
+				return new Promise(resolve => setTimeout(resolve, delay));
+			}
+
+			$('window').ready( function() {
+				$("body").css("overflow-y","hidden");
+				$.when( wait(2000) ).done(function() {
+					console.log("A");
+					$("#loading").animate({opacity: 0},{complete: function () {
+						console.log("B");
+						$("#container").animate({opacity: 1},2000);
+						$(".switch").animate({opacity: 1},{complete: function() {
+							console.log("DONE");
+							$("html").css("scroll-behavior","smooth");
+							$("body").css("overflow-y","auto");
+							$("#loading").css("margin-top","-9999px");
+						}},3000);
+						console.log("C");
+					}},2000);
+				});
+			});
+//		}else{
+//			$("#container").css("opacity","1");
+//			$("#loading").css("opacity","0");
+//		}
+		
+		$("#resume-btn").on("click", function(e){
+			e.preventDefault();
+		});
+		$("#portfolio-btn").on("click", function(e){
+			e.preventDefault();
+		});
+		
 		// Sliders setup on top
 		$("#banner").find("#banner-slides").slick({
 			autoplay: true,
