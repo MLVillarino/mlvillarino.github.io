@@ -120,7 +120,8 @@ $(".galleryOver").on("click",function() {
 
 // Resume Modal TEMP NOT WORKING
 $("#resume-btn").on("click",function() {
-//	var top = $(window).scrollTop() + ($(window).height() * (1/8));
+	var top = $(window).scrollTop() + $(window).height();
+	$(window).scrollTop(top);
 //	var modal = $(this).parent().siblings(".modal");
 //	$(modal).css("display","block");
 //	$('body').css("overflow", "hidden");
@@ -136,6 +137,10 @@ $("#resume-btn").on("click",function() {
 //	}, 400, "swing", function(){
 //		//done
 //	});
+});
+$("#portfolio-btn").on("click",function() {
+	var top = $(window).scrollTop() + $(window).height();
+	$(window).scrollTop(top);
 });
 
 
