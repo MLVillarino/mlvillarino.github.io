@@ -75,6 +75,9 @@ function translate(lang){
 		$(".gallery").find("li").eq(9).find(".galleryText").html("大原学園の新ロゴ");
 		$(".gallery").find("li").eq(10).find(".galleryText").html("美容院チラシ");
 		$(".gallery").find("li").eq(11).find(".galleryText").html("BToB アルミニウム");
+		$(".gallery").find("li").eq(12).find(".galleryText").html("大阪医師会年賀状 2");
+		$(".gallery").find("li").eq(13).find(".galleryText").html("スポーツフェス");
+		$(".gallery").find("li").eq(14).find(".galleryText").html("A380型機「FLYING HONU」");
 		
 		$("#galleryModal11").find("h2").text("春秋会１００周年ロゴマーク");
 		$("#galleryModal12").find("h2").text("プリントパック年賀状2024辰年");
@@ -88,6 +91,9 @@ function translate(lang){
 		$("#galleryModal8").find("h2").text("大原学園の新ロゴ");
 		$("#galleryModal9").find("h2").text("美容院チラシ");
 		$("#galleryModal10").find("h2").text("BToB アルミニウム");
+		$("#galleryModal13").find("h2").text("大阪医師会年賀状 2");
+		$("#galleryModal14").find("h2").text("スポーツフェス");
+		$("#galleryModal15").find("h2").text("A380型機「FLYING HONU」");
 		
 		$("#galleryModal11").find("p").html("弁理士春秋会の100周年記念のロゴマークです。この葉と花の花輪(リース)は上から下に春秋会の２つの季節(秋の試験合格祝賀、春の役員選挙)を示し、円形でサイクルと周年記念の意味を表すものです。<br><br><b><u>これは私の受賞作品です。</b></u>元々、道と序数詞のthを除いたら、平面的でした。その上、社名に由来して秋のオレンジ色と春のピンク色と緑色で配色を選びましたが、ホームページのブランドカラーに合わせました。<br><br><a href='http://www.shunju.gr.jp/%ef%bc%91%ef%bc%90%ef%bc%90%e5%91%a8%e5%b9%b4%e8%a8%98%e5%bf%b5%e3%83%ad%e3%82%b4%e3%83%9e%e3%83%bc%e3%82%af/'>Shunjukai website</a>");
 		$("#galleryModal12").find("p").html("年賀状の主役は辰です。当初手書きで、スキャンされ、書道の感じを与えるために、Illustratorのアートブラシを使いながら手動で描き直しました。 黒を除けば、配色は2024年の木竜の年のラッキーカラーに基づくもので、灰色がかった白、銀色、金色となっています。不吉な色は緑と青で、これは避けようと思いました。灰色がかった白は年賀状に和風な雰囲気を与えると思っています。背景の金色の筆文字太陽は「新年の日の出」です。太陽と背景にはグラデーションをつけ、吉方位が北に含まれることから、昇天をイメージしました。 また、梅の花や横雲、低木などの和の装飾も加えました。葉っぱと松は緑色にしました。<br><br><b><u>2023年10月現在、4500以上の応募の中から900の佳作に選ばれています。</b></u><br><br><a href='https://www.printpac.co.jp/design/2024/nenga_result/?page=2'>PrintPac 2024 website</a>");
@@ -101,6 +107,9 @@ function translate(lang){
 		$("#galleryModal8").find("p").html("これは私の学校のロゴデザインコンテストに応募したものです。傾けたOpportunity(チャンス)のOに越える上向きの線と言うロゴマークです。<br><br>タイポグラフィーに関する色々なスケッチを描きました。学校のブランドカラーと格式を保ちたかったので、ロゴをモダンにしてメッセージを込めました。「階段」と言うアイデアとOの文字の「Opportunity(チャンス)」と言う意味です。");
 		$("#galleryModal9").find("p").html("特別メニューと割引が強調している高級メンズヘアサロンのチラシです。<br><br>元々、白黒の「高級美容院」のイメージを大切にして男らしさを高めたかったので、逞しい男を使いました。ヒゲや筋肉質な男性はデザインと合わなかったので、その代わりに日本人の標準的な男性を使用しました。また、メニューをメインにし、サービスを示すようにしました。");
 		$("#galleryModal10").find("p").html("アルミニウムの再利用を特化した「UACJ」と言う日本の製造業界の会社の為に作ったBtoBのポスターです。アルミ製の物が同じ素材の一本の缶から出ています。<br><br>単色でない配色、統一された構造、会社のビジョンと一致するメッセージ、この３つをポスターに表現しました。<br>メインコンセプトは「多形性」という事です。<br>再利用されたアルミニウムの物が一本の缶から出て来ることをモチーフにする事で、同社が推進するものが、アルミニウムと結び付いていることを示しています。<br>「多形性」の部分は、同じ一本の缶から出て来るアルミニウムの物から来ています。<br>一貫した配色を使うことで、「同じ素材」のつながりを表し、立体的に見えるように調整しました。");
+		$("#galleryModal13").find("p").html("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.");
+		$("#galleryModal14").find("p").html("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.");
+		$("#galleryModal15").find("p").html("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.");
 		
 		$("#contact").html("<a style='color: #D35321; text-shadow: 0px;'>連</a>絡先");
 		$("#contact").css("font-family","Toppan Bunkyu Midashi Gothic");
@@ -165,6 +174,9 @@ function translate(lang){
 		$(".gallery").find("li").eq(9).find(".galleryText").html("Updated Ohara Logo");
 		$(".gallery").find("li").eq(10).find(".galleryText").html("Hair Salon Flyer");
 		$(".gallery").find("li").eq(11).find(".galleryText").html("BToB Aluminium Poster");
+		$(".gallery").find("li").eq(12).find(".galleryText").html("Osaka Medical Association<br>New Year's Card 2");
+		$(".gallery").find("li").eq(13).find(".galleryText").html("Sports Festival<br>Poster");
+		$(".gallery").find("li").eq(14).find(".galleryText").html("A380<br>FLYING HONU");
 		
 		$("#galleryModal11").find("h2").text("Shunjukai 100th Anniversary Logo");
 		$("#galleryModal12").find("h2").text("Printpac New Year's Card Year of the Dragon 2024");
@@ -178,6 +190,9 @@ function translate(lang){
 		$("#galleryModal8").find("h2").text("Updated Ohara Logo");
 		$("#galleryModal9").find("h2").text("Hair Salon Flyer");
 		$("#galleryModal10").find("h2").text("BToB Aluminium Poster");
+		$("#galleryModal13").find("h2").text("Osaka Medical Association New Year's Card 2");
+		$("#galleryModal14").find("h2").text("Sports Festival Poster");
+		$("#galleryModal15").find("h2").text("A380 FLYING HONU");
 		
 		$("#galleryModal11").find("p").html("This is a commemorative logo representing the 100th anniversary of the “Shunjukai” patent attorney’s association. The wreath of leaves and flowers indicate the seasons derived from Shunjukai’s name (spring/“ju” for new recruits, fall/“Shun” for the exams) from top to bottom, with the circular shape indicating the cycle of time that lead to the commemoration of their anniversary.<br><br><b><u>This is my award-winning submission,</b></u> which I won last April 2023. The logo originally looked flatter, without the road and the letters “th” under the number. I also opted to go for a straightforward color scheme directly taken from the meaning of their name alone. Orange is for autumn and pink and green are for spring. However, I changed my mind and decided to use their logo’s and website’s brand colors instead.<br><br><a href='http://www.shunju.gr.jp/%ef%bc%91%ef%bc%90%ef%bc%90%e5%91%a8%e5%b9%b4%e8%a8%98%e5%bf%b5%e3%83%ad%e3%82%b4%e3%83%9e%e3%83%bc%e3%82%af/'>Shunjukai website</a>");
 		$("#galleryModal12").find("p").html("This is my submission for a contest run by PrintPac aimed at creating a New Year’s card (nengajo) for the year 2024 (Year of the Wood Dragon). This is a calligraphy-style Japanese dragon utilizing a combination of 2024’s lucky colors, the lucky direction of north and the rising sun of the New Year.<br><br>The dragon is the main focus of this design. It was hand-drawn, scanned and then manually traced with the art brushes of Illustrator. I utilized the lucky colors of greyish-white, silver and gold while trying to reduce the unlucky colors of blue and green by as much as possible. By also utilizing a brushstroke sun in the background and a gradient, the final image of a 'rising dragon' was solidified. Furthermore, I added some Japanese elements like plums and flowers.<br><br><b><u>This is an honorable mention of the PrintPac Nengajou 2024 Design Contest</b></u>, placing among 900 honorable mentions from over <strong>4,500</strong> entries.<br><br><a href='https://www.printpac.co.jp/design/2024/nenga_result/?page=2'>PrintPac 2024 website</a>");
@@ -191,6 +206,9 @@ function translate(lang){
 		$("#galleryModal8").find("p").html("This is my submission for a design contest aimed at updating my school’s logo. It is a dynamic logo featuring an arm going upwards past the O-shaped door of Opportunity.<br><br>Since I wanted to maintain the school’s brand colors and prestige, I modernized it with the palette and imbued it with a new but still-relevant message. I modernized it with the palette and imbued it with a new but still-relevant message. The idea of “stairs” as well as the forward leaning O in the logo both suggest the broader meaning of Opportunity.");
 		$("#galleryModal9").find("p").html("A flyer for a men’s hair salon with the special menu and discount emphasized above all else.<br><br>I originally wanted to elevate the “manly” and “male” aspects while keeping the aesthetics expected of a “high-end salon for men”. I chose an equally back and white muscular model at first. However, the beard and muscularity did not suit the image I had in mind, so I used a more standard but clean-cut Japanese man instead. I also scaled up the menu to make “service” the second point of focus.");
 		$("#galleryModal10").find("p").html("This is a B-to-B themed newspaper ad for a design contest run by UACJ, a Japanese company dedicated to recycling aluminum. The ad depicts multiple aluminum objects emerging from a single aluminum can.<br><br>I wanted to put three things for this submission into practice: a consistent non-monochromatic color scheme, a unified structure and a message that aligns with the company’s vision.<br>The main concept of this poster was the idea of “polymorphism”, with the recycled aluminum objects “emerging” from a single can to show how everything the company promotes all ties to aluminum and the recycling of it. “Polymorphism”, defined as “taking many forms”, is represented by the airplane and train coming out of the single aluminum can. The use of a consistent color scheme indicates the connection with the “same material”.<br>Since the horizontal sketch could not fit and since I did not want to break apart the structure of the image, I readjusted it to suit a dynamic 3D perspective, utilizing the golden ratio in the process.");
+		$("#galleryModal13").find("p").html("This is my 2nd poster submission for the Osaka Medical Association’s annual “(Chinese) New Year’s CG” design contest for the Year of the Dragon 2024.");
+		$("#galleryModal14").find("p").html("My submission for the school's annual sports festival.");
+		$("#galleryModal15").find("p").html("A poster meant to promote ANA's new A380 model airplanes that fly directly from Tokyo to Honolulu, to a younger target audience.");
 		
 		$("#contact").html("<a style='color: #D35321; text-shadow: 0px;'>R</a>EACH OUT");
 		$("#contact").css("font-family","Barlow Condensed");
