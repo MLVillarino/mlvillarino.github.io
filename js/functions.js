@@ -1,6 +1,8 @@
 winWidth = 0;
 mobileMode = false;
 langMode = "en"; //check translation.js for the rest
+var controller = new ScrollMagic.Controller();
+var enableOldFadeIn = false;
 
 
 
@@ -9,18 +11,19 @@ langMode = "en"; //check translation.js for the rest
 // CHECK IF MOBILE MODE OR DESKTOP MODE
 winWidth = $(window).width();
 chk = mobileCheck();
+//chk = true; //DEBUGGING ONLY. FORCES MOBILE MODE ON DESKTOP. THIS IS BEFORE I DID THE BANTAYAN FOOD HUB WIDTHS BASED ONE
 if(chk){
 	mobileMode = true;
 	$("#menu").css("margin-left","110vw");
 	$("#menu").css("display","none");
 	$("#menu").css("opacity","0");
-//	console.log("MOBILE MODE");
+	console.log("NOW MOBILE MODE");
 }else{
 	mobileMode = false;
 	$("#menu").css("margin-left","0px");
 	$("#menu").css("display","flex");
 	$("#menu").css("opacity","100");
-//	console.log("DESKTOP MODE");
+	console.log("NOW DESKTOP MODE");
 }
 $(window).resize(function(){
 	winWidth = $(window).width();
@@ -216,7 +219,7 @@ function isScrolledIntoView(elem) {
 }
 $(window).on("scroll resize",function(){
 	$(".fade-in").each(function(index, element){
-		if(isScrolledIntoView(element) && !$(element).hasClass("animate")){
+		if(enableOldFadeIn && isScrolledIntoView(element) && !$(element).hasClass("animate")){
 			$(element).animate({
 				opacity: 1
 			}, 5, "swing", function(){
@@ -228,5 +231,78 @@ $(window).on("scroll resize",function(){
 });
 
 
+if(!enableOldFadeIn){
+	$("#contact").addClass("fade-in");
+	
+	if(!mobileMode){ // DESKTOP MODE
+		console.log("DESKTOP MODE");
+		$(".fade-in").each(function (i, fadein) {
+			var $fadein = $(fadein);
+			new ScrollMagic.Scene({
+				triggerElement: fadein,
+				reverse: false
+			})
+			.setClassToggle(fadein, "animate-new")
+//			.addIndicators()
+			.triggerHook("0.8")
+			.addTo(controller);
+		});
+	} else {			// MOBILE MODE
+		console.log("MOBILE MODE");
+		$(".fade-in").each(function (i, fadein) {
+			var $fadein = $(fadein);
+			if ($fadein.is('#resume')) {
+				new ScrollMagic.Scene({
+					triggerElement: fadein,
+					reverse: false
+				})
+				.setClassToggle(fadein, "animate-new")
+//				.addIndicators()
+				.triggerHook("1.1")
+				.addTo(controller);
+			} else {
+				new ScrollMagic.Scene({
+					triggerElement: fadein,
+					reverse: false
+				})
+				.setClassToggle(fadein, "animate-new")
+//				.addIndicators()
+				.triggerHook("0.9")
+				.addTo(controller);
+			}
+		});
+	}
+//	new ScrollMagic.Scene({triggerElement: "#intro", reverse: false})
+//		.setClassToggle("#intro","animate-new")
+//		.addIndicators()
+//		.addTo(controller);
+//
+//	new ScrollMagic.Scene({triggerElement: "#intro-content", reverse: false})
+//		.setClassToggle("#intro-content","animate-new")
+//		.addIndicators()
+//		.addTo(controller);
+//	
+//	
+//
+//	new ScrollMagic.Scene({triggerElement: "#vint-prof", reverse: false})
+//		.setClassToggle("#vint-prof","animate-new")
+//		.addIndicators()
+//		.addTo(controller);
+//
+//	new ScrollMagic.Scene({triggerElement: "#vint-bolt", reverse: false})
+//		.setClassToggle("#vint-bolt","animate-new")
+//		.addIndicators()
+//		.addTo(controller);
+//
+//	new ScrollMagic.Scene({triggerElement: "#vint-clouds", reverse: false})
+//		.setClassToggle("#vint-clouds","animate-new")
+//		.addIndicators()
+//		.addTo(controller);
+//
+//	new ScrollMagic.Scene({triggerElement: "#vint-plant1", reverse: false})
+//		.setClassToggle("#vint-plant1","animate-new")
+//		.addIndicators()
+//		.addTo(controller);
+}
 
 
