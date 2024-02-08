@@ -251,14 +251,14 @@ if(!enableOldFadeIn){
 		console.log("MOBILE MODE");
 		$(".fade-in").each(function (i, fadein) {
 			var $fadein = $(fadein);
-			if ($fadein.is('#resume')) {
+			if ($fadein.is('#contact-content') || $fadein.is('#contact')) {
 				new ScrollMagic.Scene({
 					triggerElement: fadein,
 					reverse: false
 				})
 				.setClassToggle(fadein, "animate-new")
 //				.addIndicators()
-				.triggerHook("1.1")
+				.triggerHook("0.99")
 				.addTo(controller);
 			} else {
 				new ScrollMagic.Scene({
@@ -272,37 +272,6 @@ if(!enableOldFadeIn){
 			}
 		});
 	}
-//	new ScrollMagic.Scene({triggerElement: "#intro", reverse: false})
-//		.setClassToggle("#intro","animate-new")
-//		.addIndicators()
-//		.addTo(controller);
-//
-//	new ScrollMagic.Scene({triggerElement: "#intro-content", reverse: false})
-//		.setClassToggle("#intro-content","animate-new")
-//		.addIndicators()
-//		.addTo(controller);
-//	
-//	
-//
-//	new ScrollMagic.Scene({triggerElement: "#vint-prof", reverse: false})
-//		.setClassToggle("#vint-prof","animate-new")
-//		.addIndicators()
-//		.addTo(controller);
-//
-//	new ScrollMagic.Scene({triggerElement: "#vint-bolt", reverse: false})
-//		.setClassToggle("#vint-bolt","animate-new")
-//		.addIndicators()
-//		.addTo(controller);
-//
-//	new ScrollMagic.Scene({triggerElement: "#vint-clouds", reverse: false})
-//		.setClassToggle("#vint-clouds","animate-new")
-//		.addIndicators()
-//		.addTo(controller);
-//
-//	new ScrollMagic.Scene({triggerElement: "#vint-plant1", reverse: false})
-//		.setClassToggle("#vint-plant1","animate-new")
-//		.addIndicators()
-//		.addTo(controller);
 }
 
 
