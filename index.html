@@ -103,6 +103,13 @@
 		Updated Portfolio from Drive
 		Fixed bad portfolio image
 		Fix weird Download button auto scroll
+		FIX THE LOGO BUG ON MOBILE MENU
+		CHANGE TO SCROLLMAGIC
+		FIX THE MOBILE MENU RETAINING ISSUE ON DESKTOP RESPONSIVE SIZING
+		USE THE SHOWING MENU PROMPT NOW
+		CHANGE THE MOBILE CSS TO BE SIZE RESPONSIVE INSTEAD
+		Added 2 new works to the portfolio
+		Fixed missing close button on mobile
 -->
 		
 		<div id="bg"></div>
@@ -121,7 +128,16 @@
 			<div id="menu">
 				<div id="menu-border"></div>
 				<ul>
-					<a href="#" target="_top" class="menu-item"><li>HOME</li></a>
+					<a href="#" target="_top" class="menu-item"><li>HOME D</li></a>
+					<a href="#intro" class="menu-item"><li>ABOUT ME</li></a>
+					<a href="#gallery" class="menu-item"><li>PORTFOLIO</li></a>
+					<a href="#contact" class="menu-item"><li>REACH OUT</li></a>
+				</ul>
+			</div>
+			<div id="menu-mobile">
+				<div id="menu-border-mobile"></div>
+				<ul>
+					<a href="#" target="_top" class="menu-item"><li>HOME M</li></a>
 					<a href="#intro" class="menu-item"><li>ABOUT ME</li></a>
 					<a href="#gallery" class="menu-item"><li>PORTFOLIO</li></a>
 					<a href="#contact" class="menu-item"><li>REACH OUT</li></a>
@@ -232,6 +248,10 @@
 								</div>
 							</li>
 							<li class="fade-in">
+								<img src="images/portfolio/17 bantayan food hub.png" alt="" loading="lazy">
+								<a class="galleryOver"><div class="galleryText">バンタヤンフードハブ</div></a>
+							</li>
+							<li class="fade-in">
 								<img src="images/portfolio/1 coolbiz.png" alt="" loading="lazy">
 								<a class="galleryOver"><div class="galleryText">CoolBiz</div></a>
 							</li>
@@ -283,6 +303,10 @@
 								<img src="images/portfolio/15 airplane promo.png" alt="" loading="lazy">
 								<a class="galleryOver"><div class="galleryText">A380型機<br>「FLYING HONU」</div></a>
 							</li>
+							<li class="fade-in">
+								<img src="images/portfolio/16 panda x discovery.jpg" alt="" loading="lazy">
+								<a class="galleryOver"><div class="galleryText">パンダ×発見</div></a>
+							</li>
 						</ul>
 						<div id="modal-list">
 							<div id="galleryModal11" class="modal">
@@ -305,6 +329,18 @@
 										<div>
 											<h2>プリントパック年賀状2024辰年</h2>
 											<p>プリントパックが運営する2024年の木竜の年賀状コンテストへの応募作品です。これはラッキーカラーと吉方位を使った書道の「辰」と新年の日の出を組み合わせたものです。</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div id="galleryModal17" class="modal">
+								<div class="modal-content">
+									<span class="close">×</span>
+									<div class="modal-body">
+										<img src="images/portfolio/17 bantayan food hub.png" alt="" loading="lazy">
+										<div>
+											<h2>バンタヤンフードハブ</h2>
+											<p>従姉妹から依頼された鶏肉料理と飲茶を提供するスナックバー&販売業者小規模ビジネスのWEBサイトです。</p>
 										</div>
 									</div>
 								</div>
@@ -465,11 +501,23 @@
 									</div>
 								</div>
 							</div>
+							<div id="galleryModal16" class="modal">
+								<div class="modal-content">
+									<span class="close">×</span>
+									<div class="modal-body">
+										<img src="images/portfolio/16 panda x discovery.jpg" alt="" loading="lazy">
+										<div>
+											<h2>パンダ×発見</h2>
+											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+										</div>
+									</div>
+								</div>
+							</div>
 						</div>
 				</div>
 			</div>
-			<h1 id="contact" class="fade-in"><a style="color: #D35321; text-shadow: 0px;">R</a>EACH OUT / 連絡先</h1>
-			<div id="contact-content" class="fade-in">
+			<h1 id="contact" class="fade-in-opp"><a style="color: #D35321; text-shadow: 0px;">R</a>EACH OUT / 連絡先</h1>
+			<div id="contact-content" class="fade-in-opp">
 				<div>
 					<h2>CONTACT ME / 連絡先</h2>
 					<p>メール：<a href="mailto:mlvillarino.biz@gmail.com">mlvillarino.biz@gmail.com</a></p>
