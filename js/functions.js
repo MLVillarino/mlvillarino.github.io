@@ -1,5 +1,6 @@
 winWidth = 0;
 mobileMode = false;
+showingMenu = false;
 langMode = "en"; //check translation.js for the rest
 var controller = new ScrollMagic.Controller();
 var enableOldFadeIn = false;
@@ -12,17 +13,19 @@ var enableOldFadeIn = false;
 winWidth = $(window).width();
 chk = mobileCheck();
 //chk = true; //DEBUGGING ONLY. FORCES MOBILE MODE ON DESKTOP. THIS IS BEFORE I DID THE BANTAYAN FOOD HUB WIDTHS BASED ONE
+
 if(chk){
 	mobileMode = true;
-	$("#menu").css("margin-left","110vw");
-	$("#menu").css("display","none");
-	$("#menu").css("opacity","0");
+//	$("#menu-mobile").css("margin-left","110vw");
+//	$("#menu-mobile").css("display","none");
+//	$("#menu-mobile").css("opacity","0");
+//	showingMenu = true;
 	console.log("NOW MOBILE MODE");
 }else{
 	mobileMode = false;
-	$("#menu").css("margin-left","0px");
-	$("#menu").css("display","flex");
-	$("#menu").css("opacity","100");
+//	$("#menu-mobile").css("margin-left","none");
+//	$("#menu-mobile").css("display","flex");
+//	$("#menu-mobile").css("opacity","100");
 	console.log("NOW DESKTOP MODE");
 }
 $(window).resize(function(){
@@ -30,14 +33,26 @@ $(window).resize(function(){
 	chk = mobileCheck();
 	if(chk){
 		mobileMode = true;
-		$("#menu").css("margin-left","110vw");
-		$("#menu").css("display","none");
-		$("#menu").css("opacity","0");
+//		$("#menu-mobile").css("margin-left","110vw");
+//		$("#menu-mobile").css("display","none");
+//		$("#menu-mobile").css("opacity","0");
 	}else{
 		mobileMode = false;
-		$("#menu").css("margin-left","0px");
-		$("#menu").css("display","flex");
-		$("#menu").css("opacity","100");
+//		$("#menu-mobile").css("margin-left","0px");
+//		$("#menu-mobile").css("display","flex");
+//		$("#menu-mobile").css("opacity","100");
+	}
+	
+	if(showingMenu && winWidth >= 1080){
+		$("#menu-mobile").css("margin-left","110vw");
+		$("#menu-mobile").css("display","none");
+		$("#menu-mobile").css("opacity","0");
+		showingMenu = false;
+
+		$(".menu-modal").css("display", "none");
+		$('body').css("overflow", "auto");
+		$("#vint-top").css("display","block");
+		$(".toggle-thumb").css("display","flex");
 	}
 });
 
@@ -69,12 +84,13 @@ $("#menu-hamburger").on("click",function(){
 //			$("#banner").css("position","fixed");
 	
 	console.log("this one ESTE");
+	showingMenu = true;
 	
-	$("#menu").css("margin-left","100vw");
-	$("#menu").css("display","block");
-	$("#menu").css("position","absolute");
-	$("#menu").css("opacity","0");
-	$("#menu").animate({
+	$("#menu-mobile").css("margin-left","100vw");
+	$("#menu-mobile").css("display","block");
+	$("#menu-mobile").css("position","absolute");
+	$("#menu-mobile").css("opacity","0");
+	$("#menu-mobile").animate({
 		opacity: 1,
 		marginLeft: '40vw'
 	}, 400, "swing", function(){
@@ -175,10 +191,11 @@ $(window).click(function(e) { // Outside the window
 		$('body').css("overflow", "auto");
 		$("#vint-top").css("display","block");
 		$(".toggle-thumb").css("display","flex");
-	}else if( $(e.target).hasClass("menu-modal") || (($(e.target).is(".menu-item")) && mobileMode) ) {
-		$("#menu").css("margin-left","110vw");
-		$("#menu").css("display","none");
-		$("#menu").css("opacity","0");
+	}else if( $(e.target).hasClass("menu-modal") || (($(e.target).is(".menu-item"))) ) {
+		$("#menu-mobile").css("margin-left","110vw");
+		$("#menu-mobile").css("display","none");
+		$("#menu-mobile").css("opacity","0");
+		showingMenu = false;
 
 		$(".menu-modal").css("display", "none");
 		$('body').css("overflow", "auto");
@@ -188,10 +205,11 @@ $(window).click(function(e) { // Outside the window
 	}
 });
 $(".menu-item").on("click",function(){
-	if(mobileMode){
-		$("#menu").css("margin-left","110vw");
-		$("#menu").css("display","none");
-		$("#menu").css("opacity","0");
+	if(showingMenu){
+		$("#menu-mobile").css("margin-left","110vw");
+		$("#menu-mobile").css("display","none");
+		$("#menu-mobile").css("opacity","0");
+		showingMenu = false;
 
 		$(".menu-modal").css("display", "none");
 		$('body').css("overflow", "auto");
@@ -218,16 +236,18 @@ function isScrolledIntoView(elem) {
 	}
 }
 $(window).on("scroll resize",function(){
-	$(".fade-in").each(function(index, element){
-		if(enableOldFadeIn && isScrolledIntoView(element) && !$(element).hasClass("animate")){
-			$(element).animate({
-				opacity: 1
-			}, 5, "swing", function(){
-				//done
-			});
-			$(element).addClass("animate");
-		}
-	});
+	if(enableOldFadeIn){
+		$(".fade-in").each(function(index, element){
+			if(isScrolledIntoView(element) && !$(element).hasClass("animate")){
+				$(element).animate({
+					opacity: 1
+				}, 5, "swing", function(){
+					//done
+				});
+				$(element).addClass("animate");
+			}
+		});
+	}
 });
 
 
@@ -237,6 +257,17 @@ if(!enableOldFadeIn){
 	if(!mobileMode){ // DESKTOP MODE
 		console.log("DESKTOP MODE");
 		$(".fade-in").each(function (i, fadein) {
+			var $fadein = $(fadein);
+			new ScrollMagic.Scene({
+				triggerElement: fadein,
+				reverse: false
+			})
+			.setClassToggle(fadein, "animate-new")
+//			.addIndicators()
+			.triggerHook("0.8")
+			.addTo(controller);
+		});
+		$(".fade-in-opp").each(function (i, fadein) { //weird solution
 			var $fadein = $(fadein);
 			new ScrollMagic.Scene({
 				triggerElement: fadein,
