@@ -11,8 +11,8 @@ var enableOldFadeIn = false;
 
 // CHECK IF MOBILE MODE OR DESKTOP MODE
 winWidth = $(window).width();
-//chk = mobileCheck();
-chk = true; //DEBUGGING ONLY. FORCES MOBILE MODE ON DESKTOP. THIS IS BEFORE I DID THE BANTAYAN FOOD HUB WIDTHS BASED ONE
+chk = mobileCheck();
+//chk = true; //DEBUGGING ONLY. FORCES MOBILE MODE ON DESKTOP. THIS IS BEFORE I DID THE BANTAYAN FOOD HUB WIDTHS BASED ONE
 
 if(chk){
 	mobileMode = true;
