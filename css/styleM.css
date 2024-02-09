@@ -12,8 +12,8 @@
 	to { border-image: url("../images/vintage_border_3.png") 20% round; }
 }
 
-/*@media screen and (max-width: 1080px){*/
-@media (pointer:none), (pointer:coarse){ 
+@media screen and (max-width: 1080px){
+/*@media (pointer:none), (pointer:coarse){ */
 /*390px MOBILE VERSION MOBILE VERSION MOBILE VERSION MOBILE VERSION | old: "screen and (max-width: 960px)"*/
 
 @font-face {
@@ -285,7 +285,7 @@ body {
 
 
 
-#menu {
+#menu, #menu-mobile {
 	width: 65vw;
 	height: 100vh;
 	position: fixed;
@@ -299,8 +299,12 @@ body {
 	margin-right: 0px;
 	margin-left: 30vw;
 }
+	
+#menu {
+	display: none;
+}
 
-#menu-border {
+#menu-border, #menu-border-mobile {
 	width: 100%;
 	height: 97.5vh;
 	position: absolute;
@@ -311,7 +315,7 @@ body {
 	z-index: -100;
 }
 
-#menu > ul {
+#menu > ul, #menu-mobile > ul {
 	padding-top: 150px;
 	width: 90%;
 	list-style: none;
@@ -328,7 +332,7 @@ body {
 	box-sizing: border-box;
 }
 
-#menu a {
+#menu a, #menu-mobile a {
 	text-decoration: none;
 	list-style: none;
 	padding: 50px;
@@ -336,18 +340,18 @@ body {
 	box-sizing: border-box;
 }
 
-#menu li {
+#menu li, #menu-mobile li {
 	/*display: inline;
 	margin-right: 7.2%;*/
 	letter-spacing: 2px;
 	width: 100%;
 	box-sizing: border-box;
 }
-#menu li:last-child {
+#menu li:last-child, #menu-mobile li:last-child {
 	margin-right: 0px;
 }
 
-#menu a:nth-child(1) > li {
+#menu a:nth-child(1) > li, #menu-mobile a:nth-child(1) > li {
 	color: #fbf5ea;
     text-shadow:
    -1px -1px 0 #550030,  
@@ -356,7 +360,7 @@ body {
      1px 1px 0 #550030,
 	 4px 4px 0 #d42d4c;
 }
-#menu a:nth-child(2) > li {
+#menu a:nth-child(2) > li, #menu-mobile a:nth-child(2) > li {
 	color: #fbf5ea;
     text-shadow:
    -1px -1px 0 #5b5400,  
@@ -365,7 +369,7 @@ body {
      1px 1px 0 #5b5400,
 	 4px 4px 0 #21323a;
 }
-#menu a:nth-child(3) > li {
+#menu a:nth-child(3) > li, #menu-mobile a:nth-child(3) > li {
 	color: #fbf5ea;
     text-shadow:
    -1px -1px 0 #003c54,  
@@ -374,7 +378,7 @@ body {
      1px 1px 0 #003c54,
 	 4px 4px 0 #d88976;
 }
-#menu a:nth-child(4) > li {
+#menu a:nth-child(4) > li, #menu-mobile a:nth-child(4) > li {
 	color: #fbf5ea;
     text-shadow:
    -1px -1px 0 #546930,  
@@ -384,20 +388,20 @@ body {
 	 4px 4px 0 #005073;
 }
 
-#menu a > li {
+#menu a > li, #menu-mobile a > li {
 	color: white;
 	transition: 0.5s ease;
 }
-#menu a:nth-child(1):hover > li {
+#menu a:nth-child(1):hover > li, #menu-mobile a:nth-child(1):hover > li {
 	color: #a7b15e; /*#cfda99*/
 }
-#menu a:nth-child(2):hover > li {
+#menu a:nth-child(2):hover > li, #menu-mobile a:nth-child(2):hover > li {
 	color: #a7917c;
 }
-#menu a:nth-child(3):hover > li {
+#menu a:nth-child(3):hover > li, #menu-mobile a:nth-child(3):hover > li {
 	color: #b4ddcf;
 }
-#menu a:nth-child(4):hover > li {
+#menu a:nth-child(4):hover > li, #menu-mobile a:nth-child(4):hover > li {
 	color: #d35321;
 }
 
@@ -669,7 +673,7 @@ body {
 	padding-left: 0px;
 	gap: 17.5px;
 	flex-direction: column;
-	height: 5000px;
+	height: 5500px;
 	margin-top: 25px;
 }
 
@@ -794,7 +798,7 @@ body {
 	font-size: 96px;
 	font-weight: bold;
 	margin-right: 5px;
-	margin-top: -15px;
+	margin-top: 100px;
 	z-index: 999;
 }
 .close:hover, .close:focus {
