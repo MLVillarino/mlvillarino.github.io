@@ -11,8 +11,8 @@ var enableOldFadeIn = false;
 
 // CHECK IF MOBILE MODE OR DESKTOP MODE
 winWidth = $(window).width();
-chk = mobileCheck();
-//chk = true; //DEBUGGING ONLY. FORCES MOBILE MODE ON DESKTOP. THIS IS BEFORE I DID THE BANTAYAN FOOD HUB WIDTHS BASED ONE
+//chk = mobileCheck();
+chk = true; //DEBUGGING ONLY. FORCES MOBILE MODE ON DESKTOP. THIS IS BEFORE I DID THE BANTAYAN FOOD HUB WIDTHS BASED ONE
 
 if(chk){
 	mobileMode = true;
@@ -289,7 +289,7 @@ if(!enableOldFadeIn){
 				})
 				.setClassToggle(fadein, "animate-new")
 //				.addIndicators()
-				.triggerHook("0.99")
+				.triggerHook("0.6")
 				.addTo(controller);
 			} else {
 				new ScrollMagic.Scene({
@@ -301,6 +301,17 @@ if(!enableOldFadeIn){
 				.triggerHook("0.9")
 				.addTo(controller);
 			}
+		});
+		$(".fade-in-opp").each(function (i, fadein) { //weird solution
+			var $fadein = $(fadein);
+			new ScrollMagic.Scene({
+				triggerElement: fadein,
+				reverse: false
+			})
+			.setClassToggle(fadein, "animate-new")
+//			.addIndicators()
+			.triggerHook("0.6")
+			.addTo(controller);
 		});
 	}
 }
