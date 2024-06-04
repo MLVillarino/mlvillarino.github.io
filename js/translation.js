@@ -133,6 +133,7 @@ function translate(lang){
 		$("#contact-content").find("div").eq(0).find("h2").text("連絡先");
 		$("#contact-content").find("div").eq(1).find("h2").text("履歴書");
 		$("#contact-content").find("div").eq(0).find("p").eq(0).html("メール：<a href='mailto:mlvillarino.biz@gmail.com'>mlvillarino.biz@gmail.com</a>");
+		$("#contact-content").find("div").eq(0).find("p").eq(2).html("電話番号：<a href='tel:+63915-904-5212'>(+63)9159045212</a>");
 		
 		$("#vint-top").find("figure").html("<img src='images/vintage_top_jp.png' alt=''>");
 		$("#portfolio-btn").attr("onclick","window.location.href='https://drive.google.com/uc?export=download&id=1lSv5RfIS5mpLrgZbiFVS8HpC6AOGdCWB'");
@@ -248,6 +249,7 @@ function translate(lang){
 		$("#contact-content").find("div").eq(0).find("h2").text("CONTACT ME");
 		$("#contact-content").find("div").eq(1).find("h2").text("RESUME");
 		$("#contact-content").find("div").eq(0).find("p").eq(0).html("Email: <a href='mailto:mlvillarino.biz@gmail.com'>mlvillarino.biz@gmail.com</a>");
+		$("#contact-content").find("div").eq(0).find("p").eq(2).html("Phone：<a href='tel:+63915-904-5212'>(+63)9159045212</a>");
 		
 		$("#vint-top").find("figure").html("<img src='images/vintage_top.png' alt=''>");
 		$("#portfolio-btn").attr("onclick","window.location.href='https://drive.google.com/uc?export=download&id=16VWbAeKFKdNUYD7ogpVfbZdFrYbcW060'");
