@@ -173,7 +173,7 @@ function translate(lang){
 		$("#intro").css("font-family","Barlow Condensed");
 		
 		$("#intro-content").find("p").eq(0).html("Matthias Laurence A. Villarino <br> Ohara Jouhou IT Creator Senmon Gakkou <br> University of San Carlos");
-		$("#intro-content").find("p").eq(1).text("When I was a kid, I dabbled in hobbies like drawing and game development. Over time, I found out that I enjoyed the designing and the problem solving aspects involved in the design process. With a thirst for knowledge and a desire to understand the intricacies of Japanese graphic design including mascots, typography and logos, I slowly built up experience at a vocational school by taking every opportunity to do research and putting it into practice, creating this portfolio in the process. I’m always finding ways to hone my craft.")
+		$("#intro-content").find("p").eq(1).text("When I was a kid, I dabbled in hobbies like drawing and game development. Over time, I found out that I enjoyed condensing complex ideas into cohesive designs and solving the challenges involved in the design process. With a thirst for knowledge and a desire to understand the intricacies of graphic design in Japan—including logos, layouts, typography, and mascots—I slowly built up experience at a vocational school by taking every opportunity to do research, creating this portfolio in the process. I’m always finding ways to hone my craft.")
 		
 		$("#skills").find("h2").eq(0).text("SOFTWARE");
 		$("#skills").find("h2").eq(1).text("SKILLS");
