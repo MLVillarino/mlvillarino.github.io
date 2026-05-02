@@ -145,7 +145,7 @@ function translate(lang){
 		$("#contact-content").find("div").eq(0).find("p").eq(2).html("電話番号：<a href='tel:+63915-904-5212'>(+63)9159045212</a>");
 		
 		$("#vint-top").find("figure").html("<img src='images/vintage_top_jp.png' alt=''>");
-		$("#portfolio-btn").attr("onclick","window.location.href='https://drive.google.com/uc?export=download&id=144CoR0DbUOfsy9ZsUl4t6BWGek2HKdy7'");
+		$("#portfolio-btn").attr("onclick","window.location.href='https://drive.google.com/uc?export=download&id=1sQRcqXAMELufnCycH0NWzY-dCnq_NNZ0'");
 	}else{
 		if(mobileMode){
 			$("#menu").css("font-size","3em");
@@ -270,6 +270,6 @@ function translate(lang){
 		$("#contact-content").find("div").eq(0).find("p").eq(2).html("Phone：<a href='tel:+63915-904-5212'>(+63)9159045212</a>");
 		
 		$("#vint-top").find("figure").html("<img src='images/vintage_top.png' alt=''>");
-		$("#portfolio-btn").attr("onclick","window.location.href='https://drive.google.com/uc?export=download&id=144CoR0DbUOfsy9ZsUl4t6BWGek2HKdy7'");
+		$("#portfolio-btn").attr("onclick","window.location.href='https://drive.google.com/uc?export=download&id=1sQRcqXAMELufnCycH0NWzY-dCnq_NNZ0'");
 	}
 }
