@@ -21,6 +21,14 @@ $('.switch').children('input:checkbox').change(
 // EN to JP Translation and Vice Versa
 function translate(lang){
 	langMode = lang; //for outside translate button toggle
+	$(".portfolioFilter[data-category='print']").text("Print & Graphic");
+	$(".portfolioFilter[data-category='art']").text("Fan & Character Art");
+	$(".portfolioFilter[data-category='web']").text("Web & UI/UX");
+	if(lang === "jp"){
+		$(".portfolioFilter[data-category='print']").text("印刷・グラフィック");
+		$(".portfolioFilter[data-category='art']").text("ファンアート・キャラクター");
+		$(".portfolioFilter[data-category='web']").text("ウェブ・UI/UX");
+	}
 	if(lang === "jp"){
 		if(mobileMode){
 			$("#menu").css("font-size","2.75em");

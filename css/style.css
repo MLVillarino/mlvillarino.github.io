@@ -1037,3 +1037,50 @@ body {
 }
 
 
+/* PORTFOLIO FILTERS */
+.portfolioFilters{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: stretch;
+	gap: 14px;
+	padding: 10px;
+	padding-bottom: 6px;
+	margin-top: 18px;
+}
+
+.portfolioFilter{
+	min-height: 52px;
+	padding: 8px 18px;
+	background-color: #d8d1bb;
+	border: 1px solid #1b2d63;
+	box-shadow: 5px 5px 0 #1b2d63;
+	color: #1b2d63;
+	font-family: "Barlow Condensed";
+	font-size: 1.15em;
+	font-weight: bold;
+	cursor: pointer;
+	transition: 0.2s ease;
+}
+
+.portfolioFilter:hover{
+	transform: translate(-2px, -2px);
+	box-shadow: 7px 7px 0 #1b2d63;
+}
+
+.portfolioFilter:focus-visible{
+	outline: 2px solid #F49E00;
+	outline-offset: 4px;
+}
+
+.portfolioFilter[aria-pressed="true"]{
+	opacity: 55%;
+	transform: translate(5px, 5px);
+	box-shadow: 0 0 0 #1b2d63;
+}
+
+.gallery > li.portfolio-hidden{
+	display: none;
+}
+
+

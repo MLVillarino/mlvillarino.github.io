@@ -317,3 +317,47 @@ if(!enableOldFadeIn){
 }
 
 
+
+// PORTFOLIO FILTERS
+var portfolioGallery = $(".gallery");
+var portfolioItems = $(".gallery > li");
+var portfolioOriginalMobileHeight = 5500;
+
+portfolioItems.each(function(){
+	var imagePath = $(this).children("img").attr("src") || "";
+	var pathParts = imagePath.replace(/\\/g, "/").toLowerCase().split("/");
+	var category = "";
+
+	if(pathParts.indexOf("art") !== -1){
+		category = "art";
+	}else if(pathParts.indexOf("portfolio") !== -1){
+		category = "print";
+	}
+
+	$(this).attr("data-category", category);
+});
+
+portfolioItems.not('[data-category="print"]').addClass("portfolio-hidden");
+
+function resizeFilteredPortfolio(){
+	if(window.matchMedia("(orientation: portrait)").matches){
+		var visibleItems = portfolioItems.not(".portfolio-hidden").length;
+		var itemHeight = portfolioOriginalMobileHeight / portfolioItems.length;
+		portfolioGallery.css("height", (itemHeight * visibleItems) + "px");
+	}else{
+		portfolioGallery.css("height", "");
+	}
+}
+
+$(".portfolioFilter").on("click",function(){
+	var category = $(this).attr("data-category");
+
+	$(".portfolioFilter").attr("aria-pressed", "false");
+	$(this).attr("aria-pressed", "true");
+	portfolioItems.addClass("portfolio-hidden");
+	portfolioItems.filter('[data-category="' + category + '"]').removeClass("portfolio-hidden");
+	resizeFilteredPortfolio();
+});
+
+$(window).on("resize", resizeFilteredPortfolio);
+resizeFilteredPortfolio();
