@@ -1,0 +1,18 @@
+User-agent: *
+Disallow: /images/
+
+# Block OpenAI (ChatGPT)
+User-agent: GPTBot
+Disallow: /
+
+# Block Anthropic (Claude)
+User-agent: AnthropicAI
+Disallow: /
+
+# Block Common Crawl (Used by many open-source models)
+User-agent: CCBot
+Disallow: /
+
+# Block Google's AI scraper
+User-agent: Google-Extended
+Disallow: /

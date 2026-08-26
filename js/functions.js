@@ -102,16 +102,142 @@ $("#menu-hamburger").on("click",function(){
 
 
 
+// BUILD THE PORTFOLIO FROM portfolioData.js
+function validPortfolioProject(project, projectIDs){
+	var validCategories = ["print", "art", "web"];
+	var valid = true;
+
+	if(!project.id || !/^[a-z0-9][a-z0-9-]*$/.test(project.id)){
+		console.error("Portfolio project has an invalid id.", project.id);
+		valid = false;
+	}else if(projectIDs[project.id]){
+		console.error("Portfolio project has a duplicate id.", project.id);
+		valid = false;
+	}
+	if(validCategories.indexOf(project.category) === -1){
+		console.error("Portfolio project has an invalid category.", project.id);
+		valid = false;
+	}
+	if(!project.thumbnail || !project.thumbnail.src || !project.modalImages || !project.modalImages.length){
+		console.error("Portfolio project is missing an image.", project.id);
+		valid = false;
+	}
+	if(!project.en || !project.jp){
+		console.error("Portfolio project is missing a language block.", project.id);
+		valid = false;
+	}
+
+	if(valid){
+		projectIDs[project.id] = true;
+	}
+	return valid;
+}
+
+function buildPortfolio(){
+	var gallery = $(".gallery");
+	var modalList = $("#modal-list");
+	var projectIDs = {};
+
+	gallery.html("");
+	modalList.html("");
+
+	$.each(portfolioData,function(index, project){
+		if(!validPortfolioProject(project, projectIDs)){
+			return;
+		}
+
+		var galleryItem = $("<li>").addClass("fade-in").attr({
+			"data-category": project.category,
+			"data-project-id": project.id
+		});
+		var thumbnail = $("<img>").attr({
+			"src": project.thumbnail.src,
+			"loading": "lazy"
+		});
+		var galleryOver = $("<a>").addClass("galleryOver").attr("data-project-id", project.id);
+		var galleryText = $("<div>").addClass("galleryText");
+
+		galleryOver.append(galleryText);
+		galleryItem.append(thumbnail);
+		galleryItem.append(galleryOver);
+		if(project.thumbnailExtraHTML){
+			galleryItem.append(project.thumbnailExtraHTML);
+		}
+		gallery.append(galleryItem);
+
+		var modal = $("<div>").addClass("modal").attr({
+			"id": "portfolioModal-" + project.id,
+			"data-project-id": project.id
+		});
+		var modalContent = $("<div>").addClass("modal-content");
+		var closeButton = $("<span>").addClass("close").html("&times;");
+		var modalBody = $("<div>").addClass("modal-body");
+		var useScrollableMedia = project.category === "web" || project.modalImages.length > 1;
+		var modalMedia = $("<div>").addClass("modal-media modal-media-scrollable");
+		if(useScrollableMedia){
+			modalBody.append(modalMedia);
+		}
+		var modalCopy = $("<div>").addClass("modal-copy");
+		var modalTitle = $("<h2>");
+		var modalParagraph = $("<p>");
+
+		$.each(project.modalImages,function(imageIndex, image){
+			var modalImage = $("<img>").attr({
+				"src": image.src,
+				"loading": "lazy",
+				"data-image-index": imageIndex
+			});
+			if(useScrollableMedia){
+				modalMedia.append(modalImage);
+			}else{
+				modalBody.append(modalImage);
+			}
+		});
+
+		modalCopy.append(modalTitle);
+		modalCopy.append(modalParagraph);
+		modalBody.append(modalCopy);
+		modalContent.append(closeButton);
+		modalContent.append(modalBody);
+		modal.append(modalContent);
+		modalList.append(modal);
+	});
+
+	updatePortfolioLanguage(langMode);
+}
+
+function updatePortfolioLanguage(lang){
+	$.each(portfolioData,function(index, project){
+		var copy = project[lang] || project.en;
+		var galleryItem = $('.gallery > li[data-project-id="' + project.id + '"]');
+		var modal = $('#modal-list > .modal[data-project-id="' + project.id + '"]');
+		var thumbnailAlt = project.thumbnail.alt[lang] || project.thumbnail.alt.en || "";
+
+		galleryItem.children("img").first().attr("alt", thumbnailAlt);
+		galleryItem.find(".galleryText").html(copy.cardHTML);
+		modal.find(".modal-copy > h2").html(copy.titleHTML);
+		modal.find(".modal-copy > p").html(copy.bodyHTML);
+
+		$.each(project.modalImages,function(imageIndex, image){
+			var imageAlt = image.alt[lang] || image.alt.en || "";
+			modal.find('img[data-image-index="' + imageIndex + '"]').attr("alt", imageAlt);
+		});
+	});
+}
+
+buildPortfolio();
+
+
 // Gallery Modal
 $(".galleryOver").on("click",function() {
-	var ind = $(this).parent("li").index();
+	var projectID = $(this).attr("data-project-id");
 //			var txt = $(this).children(".galleryText").text();
 	if(mobileMode){
 		var top = $(window).scrollTop() + ($(window).height() * (1/4));
 	}else{
 		var top = $(window).scrollTop() + ($(window).height() * (1/10));
 	}
-	var modal = $("#modal-list").children(".modal").filter(":nth-child("+(ind+1)+")");
+	var modal = $("#portfolioModal-" + projectID);
 	$(modal).css("display","block");
 	$("#modal-list").find("p").css("display","block");
 	$('body').css("overflow", "hidden");
@@ -321,29 +447,14 @@ if(!enableOldFadeIn){
 // PORTFOLIO FILTERS
 var portfolioGallery = $(".gallery");
 var portfolioItems = $(".gallery > li");
-var portfolioOriginalMobileHeight = 5500;
-
-portfolioItems.each(function(){
-	var imagePath = $(this).children("img").attr("src") || "";
-	var pathParts = imagePath.replace(/\\/g, "/").toLowerCase().split("/");
-	var category = "";
-
-	if(pathParts.indexOf("art") !== -1){
-		category = "art";
-	}else if(pathParts.indexOf("portfolio") !== -1){
-		category = "print";
-	}
-
-	$(this).attr("data-category", category);
-});
+var portfolioMobileItemHeight = 5500 / 21;
 
 portfolioItems.not('[data-category="print"]').addClass("portfolio-hidden");
 
 function resizeFilteredPortfolio(){
 	if(window.matchMedia("(orientation: portrait)").matches){
 		var visibleItems = portfolioItems.not(".portfolio-hidden").length;
-		var itemHeight = portfolioOriginalMobileHeight / portfolioItems.length;
-		portfolioGallery.css("height", (itemHeight * visibleItems) + "px");
+		portfolioGallery.css("height", (portfolioMobileItemHeight * visibleItems) + "px");
 	}else{
 		portfolioGallery.css("height", "");
 	}
