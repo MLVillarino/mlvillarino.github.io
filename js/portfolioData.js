@@ -76,6 +76,36 @@ var portfolioData = [
     }
   },
   {
+    "id": "art-10",
+    "category": "art",
+    "thumbnail": {
+      "src": "images/art/10 fwmc fbk.png",
+      "alt": {
+        "en": "",
+        "jp": ""
+      }
+    },
+    "modalImages": [
+      {
+        "src": "images/art/10 fwmc fbk.png",
+        "alt": {
+          "en": "",
+          "jp": ""
+        }
+      }
+    ],
+    "en": {
+      "cardHTML": "FUWAMOCO & Fubuki:<br>Ambulance Rescue",
+      "titleHTML": "FUWAMOCO & Fubuki: Ambulance Rescue",
+      "bodyHTML": "Fanart combining Inktober's 'Rescue' and Holoctober's 'Stickman' prompts, based on FUWAMOCO and Fubuki's HoloGTA hospital dynamic. I drew an airborne ambulance rushing through a tilted city scene, with a flattened YAGOO stickman adding one more casualty to the attempted rescue."
+    },
+    "jp": {
+      "cardHTML": "FUWAMOCOとフブキ：<br>救急車の救助騒動",
+      "titleHTML": "FUWAMOCOとフブキ：救急車の救助騒動",
+      "bodyHTML": "FUWAMOCOとフブキのHoloGTAでの救助シーンをもとにしたファンアートです。傾いた街の構図で空を飛ぶ救急車を描き、つぶれたYAGOOの棒人間も入れて、救助なのに大変なことになっている場面にしました。"
+    }
+  },
+  {
     "id": "art-02",
     "category": "art",
     "thumbnail": {
@@ -196,6 +226,66 @@ var portfolioData = [
     }
   },
   {
+    "id": "art-11",
+    "category": "art",
+    "thumbnail": {
+      "src": "images/art/11 ccgg swap.png",
+      "alt": {
+        "en": "",
+        "jp": ""
+      }
+    },
+    "modalImages": [
+      {
+        "src": "images/art/11 ccgg swap.png",
+        "alt": {
+          "en": "",
+          "jp": ""
+        }
+      }
+    ],
+    "en": {
+      "cardHTML": "Cecilia Immergreen &<br>Gigi Murin: Outfit Swap",
+      "titleHTML": "Cecilia Immergreen & Gigi Murin: Outfit Swap",
+      "bodyHTML": "Hololive outfit-swap fanart featuring Cecilia Immergreen and Gigi Murin, with one twist: their clothes don't change size. Gigi ends up buried in Cecilia's loose outfit, while Cecilia struggles with Gigi's much smaller clothes, turning a familiar fanart theme into a visual joke."
+    },
+    "jp": {
+      "cardHTML": "セシリアとジジ：衣装交換",
+      "titleHTML": "セシリアとジジ：衣装交換",
+      "bodyHTML": "セシリア・イマーグリーンとジジ・ムリンの衣装交換を描いたファンアートです。ただし服のサイズは変わらないため、ジジには大きすぎ、セシリアには小さすぎる衣装になり、その違いを面白く描きました。"
+    }
+  },
+  {
+    "id": "art-14",
+    "category": "art",
+    "thumbnail": {
+      "src": "images/art/14 koboreine tonjok.png",
+      "alt": {
+        "en": "",
+        "jp": ""
+      }
+    },
+    "modalImages": [
+      {
+        "src": "images/art/14 koboreine tonjok.png",
+        "alt": {
+          "en": "",
+          "jp": ""
+        }
+      }
+    ],
+    "en": {
+      "cardHTML": "Pavolia Reine &<br>Kobo Kanaeru: Teacher's Tonjok",
+      "titleHTML": "Pavolia Reine &<br>Kobo Kanaeru: Teacher's Tonjok",
+      "bodyHTML": "Comedic Hololive fanart piece of Pavolia Reine teaching Kobo Kanaeru, combining Inktober's 'Smack' prompt with Holoctober's 'Teacher'. I treated the lesson like a slapstick scene with raw shonen energy and motion lines, using Reine's punch and the characters' reactions to make the joke clear without a complicated background."
+    },
+    "jp": {
+      "cardHTML": "パヴォリア・レイネとこぼ・かなえる：<br>パンチの授業",
+      "titleHTML": "パヴォリア・レイネとこぼ・かなえる：<br>パンチの授業",
+      "bodyHTML": "レイネがこぼに教える場面を、コメディ風に描いたホロライブのファンアートです。「Smack」と「Teacher」のお題を合わせて、レイネのパンチと二人の表情で、シンプルで分かりやすいジョークにしました。"
+    }
+  },
+  {
     "id": "art-06",
     "category": "art",
     "thumbnail": {
@@ -256,6 +346,36 @@ var portfolioData = [
     }
   },
   {
+    "id": "art-12",
+    "category": "art",
+    "thumbnail": {
+      "src": "images/art/12 kiara pessi.png",
+      "alt": {
+        "en": "",
+        "jp": ""
+      }
+    },
+    "modalImages": [
+      {
+        "src": "images/art/12 kiara pessi.png",
+        "alt": {
+          "en": "",
+          "jp": ""
+        }
+      }
+    ],
+    "en": {
+      "cardHTML": "Kiara vs. Pessi:<br>World Cup Fanart",
+      "titleHTML": "Kiara vs. Pessi: World Cup Fanart",
+      "bodyHTML": "Soccer-themed fanart of Kiara facing Pekora as 'Pessi', inspired by Kiara cheering for Austria and Pekora's admiration for Messi in 2026's World Cup. I staged a close-range soccer feint with exaggerated poses and opposing national uniforms, turning that fandom connection into a playful rivalry."
+    },
+    "jp": {
+      "cardHTML": "キアラ vs. ペッシ：<br>ワールドカップ風ファンアート",
+      "titleHTML": "キアラ vs. ペッシ：<br>ワールドカップ風ファンアート",
+      "bodyHTML": "オーストリアを応援するキアラと、メッシが好きなぺこらをもとにしたサッカーのファンアートです。ぺこらを「ペッシ」にして、アルゼンチンとオーストリアのユニフォームや大きな動きで、二人の勝負を描きました。"
+    }
+  },
+  {
     "id": "art-08",
     "category": "art",
     "thumbnail": {
@@ -283,6 +403,36 @@ var portfolioData = [
       "cardHTML": "ロゼミ・ラブロック：Fellow Kids",
       "titleHTML": "ロゼミ・ラブロック：Fellow Kids",
       "bodyHTML": "ロゼミが配信で若者言葉に戸惑っていた話から、「How do you do, fellow kids?」のポーズで描いたミームファンアートです。衣装、背景のRosebud、スケボーのステッカー、字幕風の文字もロゼミのネタに合わせました。"
+    }
+  },
+  {
+    "id": "art-13",
+    "category": "art",
+    "thumbnail": {
+      "src": "images/art/13 ollie batik.png",
+      "alt": {
+        "en": "",
+        "jp": ""
+      }
+    },
+    "modalImages": [
+      {
+        "src": "images/art/13 ollie batik.png",
+        "alt": {
+          "en": "",
+          "jp": ""
+        }
+      }
+    ],
+    "en": {
+      "cardHTML": "Kureiji Ollie:<br>Batik Celebration",
+      "titleHTML": "Kureiji Ollie: Batik Celebration",
+      "bodyHTML": "Fanart of Kureiji Ollie celebrating with her detachable arms raised, while her off-shoulder dress starts to slip. I recreated a parang-style batik pattern across the fabric, using its folds and movement to turn the 'Hooray' Inktober prompt into a cheeky wardrobe-malfunction joke."
+    },
+    "jp": {
+      "cardHTML": "クレイジー・オリー：<br>バティックで大喜び",
+      "titleHTML": "クレイジー・オリー：<br>バティックで大喜び",
+      "bodyHTML": "クレイジー・オリーが両腕を外して喜ぶ場面を描いたファンアートです。バティックのパラン柄を服に描き、手を上げたことでドレスがずれそうになる、少し大胆なジョークにしました。"
     }
   },
   {
